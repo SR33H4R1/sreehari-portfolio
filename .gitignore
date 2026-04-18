@@ -6,3 +6,5 @@ dist/
 .vercel/
 .venv/
 __pycache__/
+
+.vercel
