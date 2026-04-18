@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sreehari — AI Engineer | Backend-First GenAI Systems</title>
+<meta name="description" content="Sreehari — AI Engineer focused on backend-first GenAI systems with FastAPI, LangChain, RAG, and PostgreSQL." />
+<meta name="theme-color" content="#0b0b0c" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="SreehariPortfolioStyles.css" />
+<script>
+  // Early theme boot — prevents flash of wrong theme.
+  (function () {
+    try {
+      document.documentElement.classList.add('has-reveal-js');
+      var saved = localStorage.getItem('sh-theme');
+      if (saved === 'light' || saved === 'dark') {
+        document.documentElement.setAttribute('data-theme', saved);
+      }
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body>
+
+<!-- Scroll progress -->
+<div class="scroll-progress" aria-hidden="true"></div>
+
+<!-- Ambient layers -->
+<div class="spotlight" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+
+<!-- Custom cursor -->
+<div class="cursor" aria-hidden="true">
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"><span class="cursor-label"></span></div>
+</div>
+
+<!-- Nav -->
+<header class="nav" id="nav">
+  <a class="brand" href="#top" aria-label="Home" data-cursor="link">
+    <span class="brand-mark">S</span>
+    <span class="brand-text">Sreehari<span class="brand-sep">/</span><span class="brand-sub">AI&nbsp;Engineer</span></span>
+  </a>
+
+  <nav class="nav-links" aria-label="Primary">
+    <a href="#about" data-nav data-cursor="link">About</a>
+    <a href="#skills" data-nav data-cursor="link">Skills</a>
+    <a href="#projects" data-nav data-cursor="link">Projects</a>
+    <a href="#experience" data-nav data-cursor="link">Experience</a>
+    <a href="#contact" data-nav data-cursor="link">Contact</a>
+  </nav>
+
+  <div class="nav-right">
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle theme" data-cursor="button">
+      <svg class="icon-sun" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+    <a class="nav-cta" href="#contact" data-cursor="button">
+      <span>Get in touch</span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- Hero -->
+  <section class="hero">
+    <!-- Faint background grid -->
+    <div class="hero-bg" aria-hidden="true"></div>
+
+    <div class="hero-status reveal">
+      <span class="status-col">
+        <span class="dot"></span>
+        <span>Available for AI / Backend roles</span>
+      </span>
+      <span class="status-sep" aria-hidden="true"></span>
+      <span class="status-col">
+        <span class="status-label">Local</span>
+        <span id="local-time">—</span>
+      </span>
+      <span class="status-sep" aria-hidden="true"></span>
+      <span class="status-col">
+        <span class="status-label">v</span>
+        <span>2026.1</span>
+      </span>
+    </div>
+
+    <h1 class="hero-title">
+      <span class="line"><span>Sreehari.</span></span>
+      <span class="line"><em>GenAI</em>&nbsp;systems,</span>
+      <span class="line"><span class="muted">backend-first.</span></span>
+    </h1>
+
+    <div class="hero-meta-row reveal">
+      <p class="hero-pitch">
+        I build backend-first AI systems with <strong>FastAPI</strong>, <strong>LangChain</strong>,
+        <strong>RAG</strong>, and <strong>PostgreSQL</strong> — with production-oriented API design.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#contact" data-cursor="button">
+          <span>Get in touch</span>
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <nav class="hero-links" aria-label="Profiles">
+          <a href="#" data-link="github" data-cursor="link">GitHub</a>
+          <span aria-hidden="true">·</span>
+          <a href="#" data-link="linkedin" data-cursor="link">LinkedIn</a>
+          <span aria-hidden="true">·</span>
+          <a href="#" data-link="resume" data-cursor="link">Résumé</a>
+          <span aria-hidden="true">·</span>
+          <a href="mailto:your.email@example.com" data-link="email" data-cursor="link">Email</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="hero-scroll reveal" aria-hidden="true">
+      <span>Scroll</span>
+      <span class="hero-scroll-line"></span>
+    </div>
+  </section>
+
+  <!-- Currently ticker -->
+  <section class="currently" aria-label="Currently">
+    <div class="currently-inner">
+      <span class="currently-label">Currently</span>
+      <span class="currently-text">
+        building retrieval pipelines in Python
+        <span class="dot-sep">·</span> sharpening FastAPI production patterns
+        <span class="dot-sep">·</span> open to AI / backend engineer roles
+      </span>
+    </div>
+  </section>
+
+  <!-- Signal Bar -->
+  <section class="signal" aria-label="Focus areas">
+    <ul class="signal-track">
+      <li><span class="idx">01</span> Backend-first AI systems</li>
+      <li><span class="idx">02</span> RAG &amp; retrieval workflows</li>
+      <li><span class="idx">03</span> FastAPI + PostgreSQL APIs</li>
+      <li><span class="idx">04</span> Production-minded project design</li>
+    </ul>
+  </section>
+
+  <!-- About -->
+  <section class="section" id="about">
+    <header class="section-head reveal">
+      <span class="eyebrow">01 — About</span>
+      <h2 class="section-title">Backend-first, <span class="muted">AI-focused.</span></h2>
+    </header>
+    <div class="about-grid">
+      <p class="about-lead reveal">
+        I’m an AI engineer focused on <strong>API-driven GenAI systems</strong>: source-grounded retrieval,
+        structured outputs, and clean backend architecture that is fit to ship.
+      </p>
+      <div class="about-body reveal">
+        <p>
+          My work centers on Python services built with FastAPI, PostgreSQL, and retrieval pipelines
+          using LangChain. I care about the boring things that make AI systems reliable — schema design,
+          typed contracts, retries, logging, and honest evaluation of retrieval quality.
+        </p>
+        <p>
+          I prefer small, sharp systems with a clear problem statement over demos that don’t survive
+          contact with real data.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="section" id="skills">
+    <header class="section-head reveal">
+      <span class="eyebrow">02 — Skills</span>
+      <h2 class="section-title">Stack &amp; <span class="muted">capabilities.</span></h2>
+      <p class="section-sub">Self-assessed proficiency across the backend-first GenAI stack.</p>
+    </header>
+
+    <div class="skills-filters reveal" role="tablist" aria-label="Skill categories">
+      <button class="chip chip-filter is-active" data-filter="all" role="tab" aria-selected="true" data-cursor="button">All</button>
+      <button class="chip chip-filter" data-filter="backend" role="tab" data-cursor="button">Backend</button>
+      <button class="chip chip-filter" data-filter="db" role="tab" data-cursor="button">Databases</button>
+      <button class="chip chip-filter" data-filter="ai" role="tab" data-cursor="button">AI Engineering</button>
+      <button class="chip chip-filter" data-filter="prod" role="tab" data-cursor="button">Production / Tooling</button>
+    </div>
+
+    <div class="skills-matrix" id="skills-matrix">
+      <!-- Rendered from JS -->
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="section" id="projects">
+    <header class="section-head reveal">
+      <span class="eyebrow">03 — Projects</span>
+      <h2 class="section-title">Selected <span class="muted">work.</span></h2>
+      <p class="section-sub">Engineering case studies — click any card to expand the writeup.</p>
+    </header>
+
+    <div class="projects" id="projects-grid">
+      <!-- Rendered from JS -->
+    </div>
+  </section>
+
+  <!-- Experience / Education -->
+  <section class="section" id="experience">
+    <header class="section-head reveal">
+      <span class="eyebrow">04 — Experience &amp; Education</span>
+      <h2 class="section-title">Background.</h2>
+    </header>
+
+    <ol class="timeline">
+      <li class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-body">
+          <div class="timeline-meta">
+            <span class="timeline-date">Ongoing</span>
+            <span class="timeline-tag">Independent</span>
+          </div>
+          <h3>Independent AI / Backend Engineering</h3>
+          <p>Building backend-first GenAI systems: FastAPI services, retrieval pipelines, PostgreSQL-backed data models, and structured LLM outputs.</p>
+        </div>
+      </li>
+
+      <li class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-body">
+          <div class="timeline-meta">
+            <span class="timeline-date">[Year – Year]</span>
+            <span class="timeline-tag">Education</span>
+          </div>
+          <h3>[Degree], [Institution]</h3>
+          <p>[Short description — replace with your education details.]</p>
+        </div>
+      </li>
+
+      <li class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-body">
+          <div class="timeline-meta">
+            <span class="timeline-date">Relevant</span>
+            <span class="timeline-tag">Coursework</span>
+          </div>
+          <h3>Relevant Coursework &amp; Training</h3>
+          <p>Backend development, databases, applied machine learning fundamentals, software engineering practices.</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- Courses / Learning -->
+  <section class="section" id="learning">
+    <header class="section-head reveal">
+      <span class="eyebrow">05 — Focused Technical Development</span>
+      <h2 class="section-title">What I’m <span class="muted">sharpening.</span></h2>
+    </header>
+
+    <div class="learning-grid">
+      <article class="learning-card reveal">
+        <span class="learning-num">01</span>
+        <h3>FastAPI — The Complete Course 2026</h3>
+        <p>Deepening production patterns: dependency injection, auth, background tasks, and testable API architecture.</p>
+      </article>
+      <article class="learning-card reveal">
+        <span class="learning-num">02</span>
+        <h3>AI Backend Systems Practice</h3>
+        <p>Designing services around LLMs: contracts, structured outputs, error boundaries, and retrieval evaluation.</p>
+      </article>
+      <article class="learning-card reveal">
+        <span class="learning-num">03</span>
+        <h3>RAG / LangChain — Self-Directed Builds</h3>
+        <p>Hands-on retrieval pipelines with PostgreSQL and pgvector, citation handling, and chunking trade-offs.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section contact" id="contact">
+    <header class="section-head reveal">
+      <span class="eyebrow">06 — Contact</span>
+      <h2 class="section-title contact-title">
+        Let’s build something <span class="muted">worth shipping.</span>
+      </h2>
+      <p class="section-sub">Open to AI Engineer / Applied AI Backend Engineer roles and serious collaborations.</p>
+    </header>
+
+    <ul class="contact-list">
+      <li class="reveal">
+        <a href="mailto:your.email@example.com" class="contact-row" data-link="email" data-cursor="link">
+          <span class="contact-label">Email</span>
+          <span class="contact-value">your.email@example.com</span>
+          <span class="contact-arrow" aria-hidden="true">→</span>
+        </a>
+      </li>
+      <li class="reveal">
+        <a href="#" class="contact-row" data-link="github" data-cursor="link">
+          <span class="contact-label">GitHub</span>
+          <span class="contact-value">github.com/your-handle</span>
+          <span class="contact-arrow" aria-hidden="true">→</span>
+        </a>
+      </li>
+      <li class="reveal">
+        <a href="#" class="contact-row" data-link="linkedin" data-cursor="link">
+          <span class="contact-label">LinkedIn</span>
+          <span class="contact-value">linkedin.com/in/your-handle</span>
+          <span class="contact-arrow" aria-hidden="true">→</span>
+        </a>
+      </li>
+      <li class="reveal">
+        <a href="#" class="contact-row" data-link="resume" data-cursor="link">
+          <span class="contact-label">Résumé</span>
+          <span class="contact-value">Download PDF</span>
+          <span class="contact-arrow" aria-hidden="true">→</span>
+        </a>
+      </li>
+    </ul>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-top-row">
+    <a href="#top" class="footer-wordmark" data-cursor="link">Sreehari<span class="period">.</span></a>
+    <p class="footer-tagline">AI Engineer <span class="slash">/</span> Backend-First GenAI Systems</p>
+  </div>
+
+  <div class="footer-grid">
+    <div class="footer-col">
+      <span class="footer-col-label">Navigate</span>
+      <ul>
+        <li><a href="#about" data-cursor="link">About</a></li>
+        <li><a href="#skills" data-cursor="link">Skills</a></li>
+        <li><a href="#projects" data-cursor="link">Projects</a></li>
+        <li><a href="#experience" data-cursor="link">Experience</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <span class="footer-col-label">Elsewhere</span>
+      <ul>
+        <li><a href="#" data-link="github" data-cursor="link">GitHub ↗</a></li>
+        <li><a href="#" data-link="linkedin" data-cursor="link">LinkedIn ↗</a></li>
+        <li><a href="mailto:your.email@example.com" data-link="email" data-cursor="link">Email ↗</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <span class="footer-col-label">Colophon</span>
+      <p class="footer-note">
+        Built with hand-written <span class="mono">HTML · CSS · JS</span>.
+        Type set in <em>Fraunces</em>, Inter &amp; JetBrains Mono.
+        No frameworks, no trackers.
+      </p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© <span id="year"></span> Sreehari · All rights reserved.</span>
+    <span class="footer-meta">
+      <span class="mono">v2026.1</span>
+      <span class="slash">/</span>
+      <span class="mono">last updated <span id="updated">today</span></span>
+    </span>
+  </div>
+</footer>
+
+<script src="SreehariPortfolioInteractions.js" defer></script>
+</body>
+</html>

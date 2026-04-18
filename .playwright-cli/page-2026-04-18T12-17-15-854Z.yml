@@ -1,0 +1,345 @@
+- generic [ref=e2]:
+  - banner [ref=e21]:
+    - link "Sreehari home" [ref=e22] [cursor=pointer]:
+      - /url: "#top"
+      - generic [ref=e23]: S
+      - generic [ref=e24]: Sreehari/AI Engineer
+    - button "Toggle mobile menu" [expanded] [active] [ref=e424]
+    - generic [ref=e427]:
+      - link "About" [ref=e428] [cursor=pointer]:
+        - /url: "#about"
+      - link "Skills" [ref=e429] [cursor=pointer]:
+        - /url: "#skills"
+      - link "Projects" [ref=e430] [cursor=pointer]:
+        - /url: "#projects"
+      - link "Experience" [ref=e431] [cursor=pointer]:
+        - /url: "#experience"
+      - link "Contact" [ref=e432] [cursor=pointer]:
+        - /url: "#contact"
+      - button "Open command drawer" [ref=e433]
+  - main [ref=e36]:
+    - generic [ref=e37]:
+      - generic [ref=e39]:
+        - generic [ref=e40]:
+          - generic [ref=e41]:
+            - generic [ref=e43]: Available for AI / Backend roles
+            - generic [ref=e45]: v2026.2
+          - heading "Sreehari. GenAI systems, backend-first." [level=1] [ref=e46]:
+            - generic [ref=e49]: Sreehari.
+            - generic [ref=e52]:
+              - emphasis [ref=e53]: GenAI
+              - text: systems,
+            - generic [ref=e55]: backend-first.
+          - generic [ref=e56]:
+            - paragraph [ref=e57]: I build backend-first AI systems with FastAPI, LangChain, RAG, PostgreSQL, and production-oriented API design.
+            - generic [ref=e58]:
+              - link "Get in touch" [ref=e59] [cursor=pointer]:
+                - /url: "#contact"
+                - text: Get in touch
+                - generic [ref=e60]: "->"
+              - link "Resume PDF" [ref=e61] [cursor=pointer]:
+                - /url: "#"
+          - generic [ref=e62]:
+            - generic [ref=e63]: Backend-first AI systems
+            - generic [ref=e64]: RAG and retrieval workflows
+            - generic [ref=e65]: FastAPI + PostgreSQL APIs
+            - generic [ref=e66]: Production-minded project design
+        - complementary "Portfolio command interface" [ref=e67]:
+          - generic [ref=e73]: Portfolio command interface
+          - generic [ref=e74]:
+            - generic [ref=e75]: Explore stack, projects, proof, contact
+            - strong [ref=e76]: deterministic
+          - generic [ref=e77]:
+            - paragraph [ref=e78]:
+              - generic [ref=e79]: sreehari@portfolio
+              - strong [ref=e80]: /focus
+            - generic [ref=e81]:
+              - paragraph [ref=e82]: "> Current lane: FastAPI, validation, database-backed APIs, and retrieval fundamentals."
+              - paragraph [ref=e83]: "> Build rule: micro-build skills first, then lock the flagship blueprint, then ship proof."
+              - paragraph [ref=e84]: "> Quality rule: no fake production claims; planned systems stay labeled as planned."
+          - generic "Terminal command suggestions" [ref=e85]:
+            - button "/about" [ref=e86] [cursor=pointer]
+            - button "/stack" [ref=e87] [cursor=pointer]
+            - button "/projects" [ref=e88] [cursor=pointer]
+            - button "/focus" [ref=e89] [cursor=pointer]
+            - button "/contact" [ref=e90] [cursor=pointer]
+          - button "Open related section" [ref=e91] [cursor=pointer]: Open related section ->
+      - generic "Portfolio proof signals" [ref=e92]:
+        - article [ref=e93]:
+          - generic [ref=e94]: 01 / Positioning
+          - strong [ref=e95]: Backend-first AI
+          - paragraph [ref=e96]: APIs, data contracts, retrieval, and reliability before UI polish.
+        - article [ref=e97]:
+          - generic [ref=e98]: 02 / Current Stack
+          - strong [ref=e99]: FastAPI + RAG
+          - paragraph [ref=e100]: Learning and building around typed Python services and source-grounded answers.
+        - article [ref=e101]:
+          - generic [ref=e102]: 03 / Portfolio Shape
+          - strong [ref=e103]: 1 flagship + 2 support
+          - paragraph [ref=e104]: One deep system supported by two narrower, job-shaped backend AI projects.
+        - article [ref=e105]:
+          - generic [ref=e106]: 04 / Delivery Rule
+          - strong [ref=e107]: Honest status
+          - paragraph [ref=e108]: In-progress and planned work is labeled clearly until real implementation exists.
+    - generic [ref=e109]:
+      - generic [ref=e110]:
+        - generic [ref=e111]: 01 - About
+        - heading "Backend-first, AI-focused." [level=2] [ref=e112]
+      - generic [ref=e113]:
+        - paragraph [ref=e114]:
+          - text: I am an AI engineer focused on
+          - strong [ref=e115]: API-driven GenAI systems
+          - text: ": source-grounded retrieval, structured outputs, and clean backend architecture that is fit to ship."
+        - generic [ref=e116]:
+          - paragraph [ref=e117]: "My work centers on Python services built with FastAPI, PostgreSQL, and retrieval pipelines using LangChain. I care about the parts that make AI systems reliable: schema design, typed contracts, retries, logging, and honest evaluation of retrieval quality."
+          - paragraph [ref=e118]: I prefer small, sharp systems with a clear problem statement over demos that do not survive contact with real data.
+    - generic [ref=e119]:
+      - generic [ref=e120]:
+        - generic [ref=e121]: 02 - Skills
+        - heading "System layers." [level=2] [ref=e122]
+        - paragraph [ref=e123]: Backend, data, AI, and production capabilities mapped as a connected system rather than a loose keyword list.
+      - generic [ref=e124]:
+        - tablist "Skill categories" [ref=e125]:
+          - tab "All layers" [selected] [ref=e126] [cursor=pointer]
+          - tab "Backend" [ref=e127] [cursor=pointer]
+          - tab "Databases" [ref=e128] [cursor=pointer]
+          - tab "AI Engineering" [ref=e129] [cursor=pointer]
+          - tab "Production / Tooling" [ref=e130] [cursor=pointer]
+        - generic [ref=e131]:
+          - article [ref=e132]:
+            - generic [ref=e133]:
+              - generic [ref=e134]: layer_01
+              - heading "Backend" [level=3] [ref=e135]
+            - paragraph [ref=e136]: API contracts, routing, validation, and service boundaries.
+            - generic [ref=e137]:
+              - generic [ref=e138]: Python
+              - generic [ref=e139]: FastAPI
+              - generic [ref=e140]: Pydantic
+              - generic [ref=e141]: SQLAlchemy
+              - generic [ref=e142]: REST APIs
+          - article [ref=e143]:
+            - generic [ref=e144]:
+              - generic [ref=e145]: layer_02
+              - heading "Databases" [level=3] [ref=e146]
+            - paragraph [ref=e147]: Relational modeling, query flow, and retrieval-aware storage.
+            - generic [ref=e148]:
+              - generic [ref=e149]: PostgreSQL
+              - generic [ref=e150]: SQL
+              - generic [ref=e151]: Relational modeling
+              - generic [ref=e152]: pgvector basics
+          - article [ref=e153]:
+            - generic [ref=e154]:
+              - generic [ref=e155]: layer_03
+              - heading "AI Engineering" [level=3] [ref=e156]
+            - paragraph [ref=e157]: RAG systems, retrieval logic, and structured model output.
+            - generic [ref=e158]:
+              - generic [ref=e159]: LangChain
+              - generic [ref=e160]: RAG
+              - generic [ref=e161]: LlamaIndex basics
+              - generic [ref=e162]: Embeddings
+              - generic [ref=e163]: Retrieval
+              - generic [ref=e164]: Structured outputs
+          - article [ref=e165]:
+            - generic [ref=e166]:
+              - generic [ref=e167]: layer_04
+              - heading "Production / Tooling" [level=3] [ref=e168]
+            - paragraph [ref=e169]: The operational layer that keeps AI APIs inspectable.
+            - generic [ref=e170]:
+              - generic [ref=e171]: Docker
+              - generic [ref=e172]: pytest
+              - generic [ref=e173]: Logging
+              - generic [ref=e174]: Git/GitHub
+              - generic [ref=e175]: Environment configuration
+              - generic [ref=e176]: API design
+    - generic [ref=e177]:
+      - generic [ref=e178]:
+        - generic [ref=e179]: 03 - Projects
+        - heading "Flagship and support systems." [level=2] [ref=e180]
+        - paragraph [ref=e181]: Case-study cards with honest statuses, architecture notes, proof signals, and replaceable placeholder links.
+      - generic [ref=e182]:
+        - article [ref=e183]:
+          - generic [ref=e184]:
+            - generic [ref=e185]:
+              - generic [ref=e186]: // case_study_01.md
+              - generic [ref=e187]: In Progress
+            - generic [ref=e188]:
+              - generic [ref=e189]:
+                - heading "Enterprise Knowledge Assistant" [level=3] [ref=e190]
+                - paragraph [ref=e191]: Source-grounded AI backend for ingesting technical documents and answering questions with citations.
+              - generic [ref=e192]:
+                - generic [ref=e193]: What it proves
+                - paragraph [ref=e194]: API design, retrieval architecture, source-backed answers, backend structure, and failure-aware GenAI design.
+            - tablist "Enterprise Knowledge Assistant details" [ref=e195]:
+              - tab "Overview" [ref=e196] [cursor=pointer]
+              - tab "Architecture" [selected] [ref=e197] [cursor=pointer]
+              - tab "Proof" [ref=e198] [cursor=pointer]
+              - tab "Stack" [ref=e199] [cursor=pointer]
+            - list [ref=e419]:
+              - listitem [ref=e420]: FastAPI API layer with explicit request and response contracts.
+              - listitem [ref=e421]: Document ingestion path that turns raw docs into searchable chunks.
+              - listitem [ref=e422]: PostgreSQL-backed persistence for documents, chunks, and query history.
+              - listitem [ref=e423]: Retrieval layer that returns citations before answer generation.
+            - generic [ref=e208]:
+              - link "GitHub" [ref=e209] [cursor=pointer]:
+                - /url: "#"
+              - link "Demo" [ref=e210] [cursor=pointer]:
+                - /url: "#"
+        - article [ref=e211]:
+          - generic [ref=e212]:
+            - generic [ref=e213]:
+              - generic [ref=e214]: // case_study_02.md
+              - generic [ref=e215]: Planned
+            - generic [ref=e216]:
+              - generic [ref=e217]:
+                - heading "Support Ops Copilot" [level=3] [ref=e218]
+                - paragraph [ref=e219]: AI backend for classifying support tickets, retrieving relevant context, drafting responses, and escalating uncertain cases.
+              - generic [ref=e220]:
+                - generic [ref=e221]: What it proves
+                - paragraph [ref=e222]: Business workflow automation, structured AI outputs, routing logic, and practical applied-AI system design.
+            - tablist "Support Ops Copilot details" [ref=e223]:
+              - tab "Overview" [selected] [ref=e224] [cursor=pointer]
+              - tab "Architecture" [ref=e225] [cursor=pointer]
+              - tab "Proof" [ref=e226] [cursor=pointer]
+              - tab "Stack" [ref=e227] [cursor=pointer]
+            - generic [ref=e229]:
+              - generic [ref=e230]:
+                - heading "Problem" [level=4] [ref=e231]
+                - paragraph [ref=e232]: Support workflows waste time on repeat triage while edge cases need cleaner routing and human escalation.
+              - generic [ref=e233]:
+                - heading "Approach" [level=4] [ref=e234]
+                - paragraph [ref=e235]: Classify incoming tickets, retrieve supporting context, draft a structured response, and route low-confidence cases to a human path.
+            - generic [ref=e236]:
+              - link "GitHub" [ref=e237] [cursor=pointer]:
+                - /url: "#"
+              - link "Demo" [ref=e238] [cursor=pointer]:
+                - /url: "#"
+        - article [ref=e239]:
+          - generic [ref=e240]:
+            - generic [ref=e241]:
+              - generic [ref=e242]: // case_study_03.md
+              - generic [ref=e243]: Planned
+            - generic [ref=e244]:
+              - generic [ref=e245]:
+                - heading "SQL Analyst Agent" [level=3] [ref=e246]
+                - paragraph [ref=e247]: Tool-using AI system for converting natural-language analytics questions into safe SQL queries and summarized results.
+              - generic [ref=e248]:
+                - generic [ref=e249]: What it proves
+                - paragraph [ref=e250]: Tool use, database reasoning, safe query design, AI-assisted analytics, and backend-controlled model behavior.
+            - tablist "SQL Analyst Agent details" [ref=e251]:
+              - tab "Overview" [selected] [ref=e252] [cursor=pointer]
+              - tab "Architecture" [ref=e253] [cursor=pointer]
+              - tab "Proof" [ref=e254] [cursor=pointer]
+              - tab "Stack" [ref=e255] [cursor=pointer]
+            - generic [ref=e257]:
+              - generic [ref=e258]:
+                - heading "Problem" [level=4] [ref=e259]
+                - paragraph [ref=e260]: Natural-language analytics is useful only if generated SQL is constrained, inspectable, and safe to execute.
+              - generic [ref=e261]:
+                - heading "Approach" [level=4] [ref=e262]
+                - paragraph [ref=e263]: Expose schema inspection, query validation, read-only execution, and summarization as controlled tools behind an API.
+            - generic [ref=e264]:
+              - link "GitHub" [ref=e265] [cursor=pointer]:
+                - /url: "#"
+              - link "Demo" [ref=e266] [cursor=pointer]:
+                - /url: "#"
+    - generic [ref=e267]:
+      - generic [ref=e268]:
+        - generic [ref=e269]: 04 - Experience & Education
+        - heading "Background." [level=2] [ref=e270]
+      - generic [ref=e271]:
+        - article [ref=e272]:
+          - generic [ref=e274]:
+            - generic [ref=e275]:
+              - generic [ref=e276]: Ongoing
+              - generic [ref=e277]: Independent
+            - heading "Independent AI / Backend Engineering" [level=3] [ref=e278]
+            - paragraph [ref=e279]: "Building backend-first GenAI systems: FastAPI services, retrieval pipelines, PostgreSQL-backed data models, and structured LLM outputs."
+        - article [ref=e280]:
+          - generic [ref=e282]:
+            - generic [ref=e283]:
+              - generic [ref=e284]: "[Year - Year]"
+              - generic [ref=e285]: Education
+            - heading "[Degree], [Institution]" [level=3] [ref=e286]
+            - paragraph [ref=e287]: "[Short description - replace with your education details.]"
+        - article [ref=e288]:
+          - generic [ref=e290]:
+            - generic [ref=e291]:
+              - generic [ref=e292]: Relevant
+              - generic [ref=e293]: Coursework
+            - heading "Relevant Coursework & Training" [level=3] [ref=e294]
+            - paragraph [ref=e295]: Backend development, databases, applied machine learning fundamentals, and software engineering practices.
+    - generic [ref=e296]:
+      - generic [ref=e297]:
+        - generic [ref=e298]: 05 - Focused Technical Development
+        - heading "What I am sharpening." [level=2] [ref=e299]
+      - generic [ref=e300]:
+        - article [ref=e301]:
+          - text: "01"
+          - heading "FastAPI - The Complete Course 2026" [level=3] [ref=e302]
+          - paragraph [ref=e303]: "Deepening production API patterns: dependency injection, auth, background tasks, and testable API architecture."
+        - article [ref=e304]:
+          - text: "02"
+          - heading "AI Backend Systems Practice" [level=3] [ref=e305]
+          - paragraph [ref=e306]: "Designing services around LLMs: contracts, structured outputs, error boundaries, and retrieval evaluation."
+        - article [ref=e307]:
+          - text: "03"
+          - heading "RAG / LangChain - Self-Directed Builds" [level=3] [ref=e308]
+          - paragraph [ref=e309]: Hands-on retrieval pipelines with PostgreSQL, citation handling, and chunking tradeoffs.
+    - generic [ref=e310]:
+      - generic [ref=e311]:
+        - generic [ref=e312]: 06 - Contact
+        - heading "Let us build something worth shipping." [level=2] [ref=e313]
+        - paragraph [ref=e314]: Open to AI Engineer / Applied AI Backend Engineer roles and serious collaborations.
+      - generic [ref=e315]:
+        - link "Email your.email@example.com" [ref=e316] [cursor=pointer]:
+          - /url: mailto:your.email@example.com
+          - generic [ref=e317]: Email
+          - strong [ref=e318]: your.email@example.com
+          - generic [ref=e319]: "->"
+        - link "GitHub github.com/your-handle" [ref=e320] [cursor=pointer]:
+          - /url: "#"
+          - generic [ref=e321]: GitHub
+          - strong [ref=e322]: github.com/your-handle
+          - generic [ref=e323]: "->"
+        - link "LinkedIn linkedin.com/in/your-handle" [ref=e324] [cursor=pointer]:
+          - /url: "#"
+          - generic [ref=e325]: LinkedIn
+          - strong [ref=e326]: linkedin.com/in/your-handle
+          - generic [ref=e327]: "->"
+        - link "Resume Download PDF" [ref=e328] [cursor=pointer]:
+          - /url: "#"
+          - generic [ref=e329]: Resume
+          - strong [ref=e330]: Download PDF
+          - generic [ref=e331]: "->"
+  - contentinfo [ref=e332]:
+    - generic [ref=e333]:
+      - link "Sreehari." [ref=e334] [cursor=pointer]:
+        - /url: "#top"
+      - paragraph [ref=e335]: AI Engineer / Backend-First GenAI Systems
+    - generic [ref=e336]:
+      - generic [ref=e337]:
+        - generic [ref=e338]: Navigate
+        - link "About" [ref=e339] [cursor=pointer]:
+          - /url: "#about"
+        - link "Skills" [ref=e340] [cursor=pointer]:
+          - /url: "#skills"
+        - link "Projects" [ref=e341] [cursor=pointer]:
+          - /url: "#projects"
+        - link "Experience" [ref=e342] [cursor=pointer]:
+          - /url: "#experience"
+        - link "Contact" [ref=e343] [cursor=pointer]:
+          - /url: "#contact"
+      - generic [ref=e344]:
+        - generic [ref=e345]: Elsewhere
+        - link "GitHub ->" [ref=e346] [cursor=pointer]:
+          - /url: "#"
+        - link "LinkedIn ->" [ref=e347] [cursor=pointer]:
+          - /url: "#"
+        - link "Email ->" [ref=e348] [cursor=pointer]:
+          - /url: mailto:your.email@example.com
+      - generic [ref=e349]:
+        - generic [ref=e350]: Colophon
+        - paragraph [ref=e351]: Built with React, TypeScript, Framer Motion, and hand-written CSS. No trackers.
+    - generic [ref=e352]:
+      - generic [ref=e353]: (c) 2026 Sreehari
+      - generic [ref=e354]: v2026.2 / Vercel-ready
