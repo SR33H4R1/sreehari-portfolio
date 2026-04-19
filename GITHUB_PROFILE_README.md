@@ -1,61 +1,71 @@
 <h1 align="center">Sreehari A L</h1>
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Inter&weight=600&size=20&duration=2800&pause=900&center=true&vCenter=true&width=900&lines=Backend-first+AI+Engineer;Python+%7C+FastAPI+%7C+RAG+%7C+LangChain;Building+reliable%2C+source-grounded+GenAI+systems" alt="Typing intro" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Inter&weight=600&size=21&duration=2600&pause=850&center=true&vCenter=true&width=980&lines=AI+Engineer+%7C+Backend-first+GenAI+Builder;Python+%7C+FastAPI+%7C+RAG+%7C+LangChain+%7C+Ollama;Building+reliable%2C+source-grounded+AI+systems" alt="Typing intro" />
 </p>
 
 <p align="center">
-  <a href="https://github.com/SR33H4R1"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-SR33H4R1-181717?style=for-the-badge&logo=github"></a>
-  <a href="https://www.linkedin.com/in/sreehari-a-l/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-Sreehari%20A%20L-0A66C2?style=for-the-badge&logo=linkedin"></a>
-  <a href="mailto:sreehariarun191@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail&logoColor=white"></a>
+  <a href="mailto:sreehariarun191@gmail.com"><img src="https://img.shields.io/badge/Hire%20Me-Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Hire me" /></a>
+  <a href="https://www.linkedin.com/in/sreehari-a-l/"><img src="https://img.shields.io/badge/Connect-LinkedIn-0A66C2?style=for-the-badge&logo=linkedin" alt="LinkedIn" /></a>
+  <a href="https://github.com/SR33H4R1"><img src="https://img.shields.io/badge/Code-GitHub-181717?style=for-the-badge&logo=github" alt="GitHub" /></a>
 </p>
 
 <p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=SR33H4R1&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github" alt="GitHub stats" />
+  <img height="165" src="https://github-readme-stats.vercel.app/api?username=SR33H4R1&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github&include_all_commits=true" alt="GitHub stats" />
   <img height="165" src="https://github-readme-streak-stats.herokuapp.com/?user=SR33H4R1&theme=tokyonight&hide_border=true" alt="GitHub streak" />
 </p>
 
 <p align="center">
-  <img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=SR33H4R1&layout=compact&theme=tokyonight&hide_border=true" alt="Top languages" />
+  <img height="150" src="https://github-readme-stats.vercel.app/api/top-langs/?username=SR33H4R1&layout=compact&theme=tokyonight&hide_border=true" alt="Top languages" />
 </p>
 
-## About
+## Why This Profile
 
-I build backend-oriented AI systems designed for reliability, clarity, and real-world use.
+I design AI systems that stay useful outside demos: typed API contracts, source-grounded retrieval, and outputs that are safe to consume in production workflows.
 
-- Source-grounded RAG pipelines with citation-aware outputs.
-- FastAPI services with typed contracts and strong validation boundaries.
-- Local LLM workflows with deterministic JSON routing and tool execution.
+## Signature Work
 
-## Featured Projects
+### AI Code Review Assistant
 
-### 1) AI Code Review Assistant
-
-LangChain + Ollama pipeline for automated Python code review and structured security checks.
+Automated Python review and security triage pipeline using LangChain and Ollama.
 
 - Repository: https://github.com/SR33H4R1/ai-code-review-assistant
-- Proof: explainable review flow, structured scan outputs, local model orchestration
+- Engineering proof: structured scan pipeline, explainable feedback stages, local model execution
+- Stack: Python, LangChain, Ollama, structured output patterns
 
-### 2) AI Supreme Court
+### AI Supreme Court
 
-Multi-agent debate engine that generates pro/con arguments and a schema-constrained verdict.
+Debate-style multi-agent reasoning system that generates pro/con cases and a schema-bound verdict.
 
 - Repository: https://github.com/SR33H4R1/ai-supreme-court
-- Proof: prompt chaining, constrained generation, reasoning flow control
+- Engineering proof: prompt chaining architecture, constrained reasoning output, deterministic flow
+- Stack: Python, LangChain, prompt orchestration
 
-### 3) Local Math and Algorithm Agent
+### Local Math and Algorithm Agent
 
-Local Llama-based agent that converts natural language into deterministic JSON tool calls.
+Local Llama-powered agent that converts natural language into deterministic JSON tool calls.
 
 - Repository: https://github.com/SR33H4R1/Local-Math-Agent-Llama3
-- Proof: strict prompting, deterministic tool routing, local inference workflow
+- Engineering proof: strict prompt contracts, predictable tool routing, local inference reliability
+- Stack: Python, Ollama, Llama, JSON routing
 
-## Tech Stack
+## Core Engineering Capabilities
+
+| Track | Capability |
+| --- | --- |
+| AI Systems | RAG pipelines, retrieval-grounded responses, structured generation |
+| Backend | FastAPI architecture, Pydantic validation, API contract discipline |
+| Data | PostgreSQL modeling, SQL workflows, pgvector-aware retrieval paths |
+| Reliability | Error boundaries, deterministic outputs, inspectable behavior |
+| Delivery | Docker, pytest, GitHub Actions, iterative shipping |
+
+## Technology Radar
 
 <p>
   <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
   <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI" />
-  <img src="https://img.shields.io/badge/LangChain-0A0A0A?style=flat-square" alt="LangChain" />
+  <img src="https://img.shields.io/badge/Pydantic-E92063?style=flat-square&logo=pydantic&logoColor=white" alt="Pydantic" />
+  <img src="https://img.shields.io/badge/LangChain-111111?style=flat-square" alt="LangChain" />
   <img src="https://img.shields.io/badge/RAG-1F6FEB?style=flat-square" alt="RAG" />
   <img src="https://img.shields.io/badge/Ollama-111111?style=flat-square" alt="Ollama" />
   <img src="https://img.shields.io/badge/PostgreSQL-316192?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL" />
@@ -65,31 +75,20 @@ Local Llama-based agent that converts natural language into deterministic JSON t
   <img src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=github-actions&logoColor=white" alt="GitHub Actions" />
 </p>
 
-## Current Focus
+## 2026 Focus
 
-- Production-grade FastAPI architecture for AI services.
-- Retrieval quality and citation-grounded answer reliability.
-- Observability, fault handling, and regression safety in GenAI backends.
+- Harden FastAPI-based AI services for production-level reliability.
+- Improve retrieval evaluation and citation quality in RAG workflows.
+- Build AI automation systems with better observability and failure recovery.
 
-## Open To
+## Opportunities
 
-- AI Engineer and Backend AI opportunities.
-- Applied GenAI projects with measurable product impact.
-- Collaborations around RAG systems, local LLM apps, and AI automation.
+I am open to AI Engineer and Backend AI roles where I can contribute to practical GenAI systems with measurable outcomes.
 
-## Connect
+## Contact
 
-- Portfolio: add your live portfolio URL
-- LinkedIn: https://www.linkedin.com/in/sreehari-a-l/
-- GitHub: https://github.com/SR33H4R1
-- Email: sreehariarun191@gmail.com
-
----
-
-## Profile Setup
-
-1. Create a public repository named exactly `SR33H4R1`.
-2. Copy this file into that repository as `README.md`.
-3. Pin six repositories that best support your target role.
-4. Keep pinned repository READMEs updated with screenshots, setup steps, and demo links.
+- Email: `sreehariarun191@gmail.com`
+- LinkedIn: `https://www.linkedin.com/in/sreehari-a-l/`
+- GitHub: `https://github.com/SR33H4R1`
+- Portfolio: `add your live portfolio URL`
 
