@@ -174,7 +174,20 @@ class Component extends DCLogic {
   }
   norm(c) { ['links', 'facts', 'projects', 'exp', 'certs', 'skills'].forEach(k => { if (!Array.isArray(c[k])) c[k] = []; }); return c; }
   load() { const d = this.defaults(); try { const s = localStorage.getItem('sreehari-portfolio-content-v1'); if (!s) return d; return this.norm(Object.assign(d, JSON.parse(s))); } catch (e) { return d; } }
-  save(c) { try { localStorage.setItem('sreehari-portfolio-content-v1', JSON.stringify(c)); } catch (e) {} }
+  save(c) { try { localStorage.setItem('sreehari-portfolio-content-v1', JSON.stringify(c)); } catch (e) {} clearTimeout(this.saveTimer); this.saveTimer = setTimeout(() => this.saveRemote(c), 500); }
+  saveRemote(c) {
+    fetch('/api/content', { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(c) })
+      .then(r => { if (!r.ok) throw new Error('Save failed'); if (this.state.admin) this.setState({ msg: 'Saved.' }); })
+      .catch(e => { if (this.state.admin) this.setState({ msg: e && e.message ? e.message : 'Save failed.' }); });
+  }
+  loadRemote = () => {
+    fetch('/api/content').then(r => r.ok ? r.json() : null).then(data => {
+      if (!data || typeof data !== 'object' || !Object.keys(data).length) return;
+      const c = this.norm(Object.assign(this.defaults(), data));
+      try { localStorage.setItem('sreehari-portfolio-content-v1', JSON.stringify(c)); } catch (e) {}
+      this.setState({ c });
+    }).catch(() => {});
+  };
   upd(fn) { this.setState(s => { const c = JSON.parse(JSON.stringify(s.c)); fn(c); this.save(c); return { c }; }); }
   getp(o, p) { return p.reduce((a, k) => (a == null ? a : a[k]), o); }
   setp(o, p, v) { const t = this.getp(o, p.slice(0, -1)); if (t) t[p[p.length - 1]] = v; }
@@ -221,11 +234,12 @@ class Component extends DCLogic {
     this.iv = setInterval(() => this.setState({ now: Date.now() }), 30000);
     window.addEventListener('scroll', this.onScroll, { passive: true }); window.addEventListener('resize', this.onResize); window.addEventListener('keydown', this.onKey);
     if (/[?&]admin/.test(location.search)) this.setState({ admin: true });
+    this.loadRemote();
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => { this.fit(); this.update(); });
     this.update(); this.fit();
   }
   componentDidUpdate(prevProps, prevState) { if (prevState.c !== this.state.c || prevState.admin !== this.state.admin || prevState.tab !== this.state.tab) this.fit(); }
-  componentWillUnmount() { clearInterval(this.iv); clearTimeout(this.t); cancelAnimationFrame(this.raf); window.removeEventListener('scroll', this.onScroll); window.removeEventListener('resize', this.onResize); window.removeEventListener('keydown', this.onKey); }
+  componentWillUnmount() { clearInterval(this.iv); clearTimeout(this.t); clearTimeout(this.saveTimer); cancelAnimationFrame(this.raf); window.removeEventListener('scroll', this.onScroll); window.removeEventListener('resize', this.onResize); window.removeEventListener('keydown', this.onKey); }
   copyEmail = () => {
     const done = () => { this.setState({ copied: true }); clearTimeout(this.t); this.t = setTimeout(() => this.setState({ copied: false }), 1800); };
     const em = this.state.c.email || '';
