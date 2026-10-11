@@ -1,5 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://sreeharial.me/sitemap.xml
-

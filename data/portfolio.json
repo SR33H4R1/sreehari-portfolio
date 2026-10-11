@@ -1,0 +1,220 @@
+{
+  "brand": "SREEHARI A L",
+  "eyebrow": "Sreehari A L · AI & Backend Engineer",
+  "headline": "I build LLM systems\nthat cite their\nsources.",
+  "intro": "AI engineer at Tecnots. I ship the service layer behind LLM features: retrieval, structured outputs, evals, guardrails and CI, so every answer is traceable and safe.",
+  "links": [
+    {
+      "label": "GitHub",
+      "href": "https://github.com/SR33H4R1/"
+    },
+    {
+      "label": "LinkedIn",
+      "href": "https://linkedin.com/in/sreehari-a-l"
+    }
+  ],
+  "facts": [
+    {
+      "k": "Based",
+      "v": "Bengaluru, India"
+    },
+    {
+      "k": "Status",
+      "v": "Open to roles"
+    },
+    {
+      "k": "Focus",
+      "v": "RAG, agents, evals"
+    },
+    {
+      "k": "Stack",
+      "v": "Python, FastAPI"
+    }
+  ],
+  "email": "sreehariarun191@gmail.com",
+  "resumeUrl": "Sreehari_AL_Resume.pdf",
+  "note": "Open to AI engineering roles · Replies within a day",
+  "footer": "© 2026 Sreehari A L",
+  "workTitle": "Selected work",
+  "moreTitle": "Other projects",
+  "expTitle": "Experience",
+  "allUrl": "https://github.com/SR33H4R1",
+  "allLabel": "All on GitHub",
+  "projects": [
+    {
+      "id": "grounded-shot",
+      "featured": true,
+      "title": "Grounded",
+      "tag": "Role-aware RAG",
+      "sub": "Ask across your documents and get an answer with its source attached. Retrieval respects who is asking, so users only see what they are allowed to.",
+      "stack": "FastAPI · FAISS · OpenAI-compatible LLM · Docker · CI",
+      "img": "/ph/grounded-shot.png",
+      "metrics": [
+        {
+          "v": "RBAC",
+          "k": "access control on retrieval"
+        },
+        {
+          "v": "Cited",
+          "k": "source on every answer"
+        }
+      ],
+      "links": [
+        {
+          "label": "Live demo",
+          "href": "#"
+        },
+        {
+          "label": "GitHub",
+          "href": "https://github.com/SR33H4R1/Grounded"
+        }
+      ]
+    },
+    {
+      "id": "querymind-shot",
+      "featured": true,
+      "title": "QueryMind",
+      "tag": "NL to SQL API",
+      "sub": "Ask your database in plain English. The model writes the SQL; a three-layer guard makes sure it can only ever read.",
+      "stack": "FastAPI · LLM · PostgreSQL · Docker",
+      "img": "/ph/querymind-shot.png",
+      "metrics": [
+        {
+          "v": "3-layer",
+          "k": "guardrail: writes, DDL, injection blocked"
+        },
+        {
+          "v": "Read-only",
+          "k": "queries by design"
+        }
+      ],
+      "links": [
+        {
+          "label": "Live demo",
+          "href": "#"
+        },
+        {
+          "label": "GitHub",
+          "href": "https://github.com/SR33H4R1/querymind"
+        }
+      ]
+    },
+    {
+      "id": "router-shot",
+      "featured": true,
+      "title": "Ticket Router",
+      "tag": "On-prem LLM",
+      "sub": "Sorts and routes support tickets with Llama 3 running locally. No ticket data ever leaves the building.",
+      "stack": "FastAPI · LangChain · Ollama · Llama 3",
+      "img": "/ph/router-shot.png",
+      "metrics": [
+        {
+          "v": "0",
+          "k": "external API calls"
+        },
+        {
+          "v": "100%",
+          "k": "on-prem"
+        }
+      ],
+      "links": [
+        {
+          "label": "Live demo",
+          "href": "#"
+        },
+        {
+          "label": "GitHub",
+          "href": "https://github.com/SR33H4R1/ai-support-ticket-router"
+        }
+      ]
+    },
+    {
+      "id": "more-shot-0",
+      "featured": false,
+      "title": "Project name",
+      "tag": "Category",
+      "sub": "One or two lines on what it does and who it is for.",
+      "stack": "Stack · Stack · Stack · Stack",
+      "img": "/ph/more-shot-0.png",
+      "metrics": [
+        {
+          "v": "00",
+          "k": "key metric"
+        },
+        {
+          "v": "00%",
+          "k": "outcome"
+        }
+      ],
+      "links": [
+        {
+          "label": "Live demo",
+          "href": "#"
+        },
+        {
+          "label": "GitHub",
+          "href": "https://github.com/SR33H4R1/"
+        }
+      ]
+    }
+  ],
+  "exp": [
+    {
+      "date": "May 2026 - Present",
+      "role": "AI Engineer Intern",
+      "org": "Tecnots · Bengaluru",
+      "now": true,
+      "pts": [
+        "Built RAG pipelines and multi-step LangGraph agents with citation-enforced answers over a ~3,000-document corpus.",
+        "Built an LLM-as-judge eval suite (~100 items) with LangSmith and Langfuse tracing for quality, latency and cost.",
+        "Shipped guardrails on every response: Pydantic-validated JSON, prompt-injection defense and PII redaction."
+      ]
+    },
+    {
+      "date": "2025",
+      "role": "AI & Data Science Training",
+      "org": "Luminar Technolab · Kochi",
+      "now": false,
+      "pts": [
+        "Applied ML, deep learning, NLP, computer vision and GenAI, with hands-on CV and OCR projects."
+      ]
+    },
+    {
+      "date": "2024",
+      "role": "B.Tech, Computer Science",
+      "org": "Rajadhani Institute of Engineering and Technology · Trivandrum",
+      "now": false,
+      "pts": []
+    }
+  ],
+  "certs": [
+    {
+      "year": "2026",
+      "title": "Generative AI Applications",
+      "org": "IBM"
+    },
+    {
+      "year": "2025",
+      "title": "Machine Learning Specialization",
+      "org": "DeepLearning.AI / Stanford"
+    }
+  ],
+  "skills": [
+    {
+      "k": "LLM",
+      "items": "RAG, LangChain, LangGraph, FAISS, pgvector"
+    },
+    {
+      "k": "Reliability",
+      "items": "RAGAS, LangSmith, Langfuse, Guardrails"
+    },
+    {
+      "k": "Backend",
+      "items": "Python, FastAPI, PostgreSQL, SQLAlchemy"
+    },
+    {
+      "k": "Ops",
+      "items": "Docker, GitHub Actions, AWS, pytest"
+    }
+  ]
+}
