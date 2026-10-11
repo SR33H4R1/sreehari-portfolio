@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
+import { isAuthorizedRequest } from "@/lib/auth";
 
-const protectedPaths = ["/admin", "/api/content", "/api/upload"];
+const protectedPaths = ["/admin", "/api/content", "/api/upload", "/api/ai"];
 
 export function proxy(request) {
   if (!process.env.ADMIN_PASSWORD) return NextResponse.next();
@@ -9,12 +10,14 @@ export function proxy(request) {
   if (pathname === "/api/content" && request.method === "GET") {
     return NextResponse.next();
   }
+  if (pathname === "/api/ai/docs" && request.method === "GET") {
+    return NextResponse.next();
+  }
 
   const needsAuth = protectedPaths.some((path) => pathname === path || pathname.startsWith(`${path}/`));
   if (!needsAuth) return NextResponse.next();
 
-  const token = request.cookies.get("portfolio_admin")?.value;
-  if (token === process.env.ADMIN_PASSWORD) return NextResponse.next();
+  if (isAuthorizedRequest(request)) return NextResponse.next();
 
   if (pathname.startsWith("/api/")) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
@@ -27,5 +30,5 @@ export function proxy(request) {
 }
 
 export const config = {
-  matcher: ["/admin/:path*", "/api/content/:path*", "/api/upload/:path*"],
+  matcher: ["/admin/:path*", "/api/content/:path*", "/api/upload/:path*", "/api/ai/:path*"],
 };

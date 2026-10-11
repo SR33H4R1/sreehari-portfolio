@@ -30,3 +30,7 @@ ADMIN_PASSWORD=...
 Run [supabase/schema.sql](./supabase/schema.sql) in the Supabase SQL editor. The app stores admin content in `portfolio_content` and uploaded images/resumes in `portfolio_assets`.
 
 Without `DATABASE_URL`, local development falls back to [data/portfolio.json](./data/portfolio.json) and local uploads under `public/uploads`.
+
+## AI editing API
+
+AI agents can update the portfolio through the password-protected API documented in [docs/ai-api.md](./docs/ai-api.md). It uses the same `ADMIN_PASSWORD` as the admin panel and supports full JSON replacement, targeted patches, project upserts/deletes, section visibility toggles, and file uploads.
