@@ -6,6 +6,10 @@ export function proxy(request) {
   if (!process.env.ADMIN_PASSWORD) return NextResponse.next();
 
   const { pathname } = request.nextUrl;
+  if (pathname === "/api/content" && request.method === "GET") {
+    return NextResponse.next();
+  }
+
   const needsAuth = protectedPaths.some((path) => pathname === path || pathname.startsWith(`${path}/`));
   if (!needsAuth) return NextResponse.next();
 
