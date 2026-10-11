@@ -1,10 +1,7 @@
-node_modules/
-dist/
-.env
-.env.*
-*.local
-.vercel/
-.venv/
-__pycache__/
-
+node_modules
+.next
+out
 .vercel
+.env*.local
+.DS_Store
+*.log

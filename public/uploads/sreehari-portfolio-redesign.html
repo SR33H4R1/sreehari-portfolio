@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="../support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Sreehari A L · AI &amp; Backend Engineer</title>
+<meta name="description" content="AI Engineer building production LLM services in Python/FastAPI: RAG, agents, evaluation and guardrails. Bengaluru, India.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..700&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:#141312;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+a:hover{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:5px}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid #f2efe8;outline-offset:3px}
+::selection{background:#f2efe8;color:#141312}
+</style>
+</helmet>
+<div style="font-family:'Archivo',system-ui,sans-serif;font-variation-settings:'wdth' 100;color:#f2efe8;font-size:18px;line-height:1.6;font-feature-settings:'tnum' 1">
+<header style="position:sticky;top:0;z-index:10;background:rgba(20,19,18,0.92);backdrop-filter:blur(8px);border-bottom:1px solid #3a3733;padding:0 clamp(20px,3.4vw,64px)">
+<div style="max-width:1800px;margin:0 auto;min-height:clamp(56px,9vh,96px);box-sizing:border-box;padding:10px 0;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 32px;font-size:14px;letter-spacing:0.02em">
+<a href="#top" style="flex:1 1 0;min-width:0;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:clamp(18px,1.6vw,26px);font-weight:700;font-variation-settings:'wdth' 125;letter-spacing:0.04em">{{ brand }}</a>
+<nav style="flex:0 0 auto;max-width:100%;display:flex;flex-wrap:nowrap;align-items:center;gap:8px clamp(10px,2.2vw,36px);text-transform:uppercase;font-size:clamp(12px,1.05vw,17px);font-weight:600;font-variation-settings:'wdth' 112;letter-spacing:0.06em">
+<sc-for list="{{ navItems }}" as="n" hint-placeholder-count="3"><a href="{{ n.href }}" style="white-space:nowrap">{{ n.label }}</a></sc-for>
+<sc-if value="{{ hasResume }}" hint-placeholder-val="{{ true }}"><a href="{{ resumeHref }}" target="_blank" rel="noopener" style="border:1px solid #f2efe8;padding:8px clamp(10px,1.2vw,18px);white-space:nowrap" style-hover="background:#f2efe8;color:#141312">{{ resumeLabel }} ↓</a></sc-if>
+</nav>
+</div>
+</header>
+<section id="top" style="padding:0 clamp(20px,3.4vw,64px)">
+<div style="max-width:1800px;margin:0 auto;box-sizing:border-box;height:calc(100vh - clamp(56px,9vh,96px) - 1px);min-height:560px;padding:clamp(20px,4vh,56px) 0 clamp(20px,4vh,48px);display:flex;flex-direction:column;gap:clamp(20px,4vh,56px)">
+<div style="flex:1 1 0;min-height:0;display:flex;flex-direction:column">
+<sc-if value="{{ hasEyebrow }}" hint-placeholder-val="{{ true }}"><p style="flex:none;margin:0 0 clamp(10px,2vh,22px);font-size:clamp(13px,0.9vw,15px);line-height:1.3;text-transform:uppercase;letter-spacing:0.08em;color:#a8a399;overflow-wrap:anywhere">{{ eyebrow }}</p></sc-if>
+<div ref="{{ boxRef }}" style="flex:1 1 0;min-height:0;display:flex;flex-direction:column;justify-content:center;overflow:hidden"><h1 ref="{{ h1Ref }}" style="margin:0;width:100%;line-height:0.98;font-weight:700;font-variation-settings:'wdth' 100;letter-spacing:-0.045em;text-transform:uppercase;white-space:pre-line">{{ headline }}</h1></div>
+</div>
+<sc-if value="{{ hasHeroBottom }}" hint-placeholder-val="{{ true }}"><div style="flex:none;display:flex;flex-wrap:wrap;gap:20px clamp(42px,5vw,80px);padding-top:clamp(20px,3vh,40px);border-top:1px solid #3a3733;align-items:flex-start">
+<div style="flex:1.5 1 420px;min-width:0;max-width:900px">
+<sc-if value="{{ hasIntro }}" hint-placeholder-val="{{ true }}"><p style="margin:0;font-size:clamp(18px,min(1.45vw,2.6vh),27px);line-height:1.42;letter-spacing:-0.01em;color:#e4e0d7;text-wrap:pretty;overflow-wrap:anywhere">{{ intro }}</p></sc-if>
+<div style="display:flex;flex-wrap:wrap;gap:12px 28px;margin-top:clamp(16px,1.8vw,30px);font-size:clamp(14px,0.9vw,16px);text-transform:uppercase;letter-spacing:0.02em"><sc-for list="{{ heroLinks }}" as="l" hint-placeholder-count="3"><a href="{{ l.href }}" target="{{ l.t }}" rel="noopener" style="border-bottom:1px solid currentColor;padding-bottom:2px">{{ l.label }} ↗</a></sc-for></div>
+</div>
+<sc-if value="{{ hasFacts }}" hint-placeholder-val="{{ true }}"><dl style="flex:1 1 380px;min-width:0;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(20px,3.4vh,36px) 34px;align-content:start"><sc-for list="{{ facts }}" as="f" hint-placeholder-count="4"><div style="min-width:0"><dt style="font-size:clamp(13px,0.85vw,15px);text-transform:uppercase;letter-spacing:0.08em;color:#a8a399;overflow-wrap:anywhere">{{ f.k }}</dt><dd style="margin:8px 0 0;font-size:clamp(18px,1.45vw,24px);line-height:1.3;font-weight:500;overflow-wrap:anywhere">{{ f.v }}</dd></div></sc-for></dl></sc-if>
+</div></sc-if>
+</div>
+</section>
+<sc-if value="{{ showWork }}" hint-placeholder-val="{{ true }}"><section id="work" aria-label="Selected work" style="border-top:1px solid #3a3733">
+<sc-if value="{{ showFeat }}" hint-placeholder-val="{{ true }}"><div ref="{{ outerRef }}" style="position:relative;height:{{ outerH }}">
+<div style="position:{{ stickyPos }};top:0;height:{{ stickyH }};display:flex;flex-direction:column;padding-top:{{ stickyPad }};box-sizing:border-box;overflow:hidden">
+<div style="padding:0 clamp(20px,4vw,56px)">
+<div style="max-width:1600px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:12px 24px;flex-wrap:wrap;padding:clamp(6px,1.2vh,12px) 0 clamp(8px,1.4vh,14px);font-size:14px">
+<h2 style="margin:0;font-size:clamp(32px,3.2vw,48px);line-height:1;font-weight:700;font-variation-settings:'wdth' 112;letter-spacing:-0.02em;overflow-wrap:anywhere">{{ workTitle }}</h2>
+<sc-if value="{{ showPos }}" hint-placeholder-val="{{ true }}"><span style="color:#f2efe8;font-size:15px;letter-spacing:0.06em;font-variant-numeric:tabular-nums;white-space:nowrap">{{ pos }}</span></sc-if>
+</div>
+<div style="max-width:1600px;margin:0 auto;height:1px;background:#f2efe8"></div>
+</div>
+<div style="flex:1;min-height:0;overflow:hidden;padding-top:clamp(12px,2vh,24px)">
+<div ref="{{ trackRef }}" style="display:flex;flex-direction:{{ trackDir }};height:{{ artH }};width:{{ trackW }}">
+<sc-for list="{{ featured }}" as="p" hint-placeholder-count="3">
+<article style="opacity:{{ p.dim }};transition:opacity .4s;flex:1 1 0;min-width:0;height:{{ artH }};box-sizing:border-box;border-top:{{ p.border }};margin-top:{{ p.gap }};padding:0 clamp(20px,4vw,56px) clamp(16px,2.4vh,28px)">
+<div style="max-width:1600px;height:100%;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;align-content:center;gap:24px clamp(40px,5vw,80px)">
+<div style="flex:1.3 1 480px;aspect-ratio:4/3;max-height:{{ imgMaxH }};background:#2c2a26;position:relative"><div style="position:absolute;inset:0"><image-slot id="{{ p.id }}" src="{{ p.img }}" shape="rect" placeholder="{{ p.title }}: screenshot"></image-slot></div></div>
+<div style="flex:1 1 340px;min-width:0;max-height:{{ imgMaxH }};overflow:auto;scrollbar-width:thin;display:flex;flex-direction:column;gap:clamp(18px,3vh,32px)">
+<div>
+<div style="display:flex;align-items:baseline;gap:16px;color:#a8a399;font-size:15px;letter-spacing:0.08em;text-transform:uppercase"><span>{{ p.n }}</span><sc-if value="{{ p.hasTag }}" hint-placeholder-val="{{ true }}"><span style="color:#f2efe8;min-width:0;overflow-wrap:anywhere">{{ p.tag }}</span></sc-if></div>
+<h3 style="margin:16px 0 0;font-size:clamp(30px,min(3.2vw,6vh),48px);line-height:1.02;font-weight:700;font-variation-settings:'wdth' 112;letter-spacing:-0.02em;text-wrap:balance;overflow-wrap:anywhere">{{ p.title }}</h3>
+<sc-if value="{{ p.hasSub }}" hint-placeholder-val="{{ true }}"><p style="margin:16px 0 0;max-width:40ch;color:#d9d4ca;font-size:clamp(16px,min(1.4vw,2.6vh),20px);line-height:1.5;text-wrap:pretty;overflow-wrap:anywhere;display:-webkit-box;-webkit-line-clamp:6;-webkit-box-orient:vertical;overflow:hidden">{{ p.sub }}</p></sc-if>
+</div>
+<div>
+<sc-if value="{{ p.hasMetrics }}" hint-placeholder-val="{{ true }}"><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:16px 24px;padding-top:24px;border-top:1px solid #3a3733"><sc-for list="{{ p.metrics }}" as="m" hint-placeholder-count="2"><div style="min-width:0"><div style="font-size:clamp(24px,2.4vw,40px);font-weight:700;font-variation-settings:'wdth' 112;line-height:1.1;overflow-wrap:anywhere">{{ m.v }}</div><div style="margin-top:6px;font-size:14px;color:#cfcac0;line-height:1.4;overflow-wrap:anywhere">{{ m.k }}</div></div></sc-for></div></sc-if>
+<sc-if value="{{ p.hasStack }}" hint-placeholder-val="{{ true }}"><div style="margin-top:20px;letter-spacing:0.02em;font-size:14px;color:#e4e0d7;line-height:1.7;overflow-wrap:anywhere;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden">{{ p.stack }}</div></sc-if>
+<sc-if value="{{ p.hasLinks }}" hint-placeholder-val="{{ true }}"><div style="display:flex;flex-wrap:wrap;gap:12px 20px;margin-top:20px;font-size:15px;text-transform:uppercase;letter-spacing:0.04em"><sc-for list="{{ p.links }}" as="l" hint-placeholder-count="1"><a href="{{ l.href }}" target="{{ l.t }}" rel="noopener" style="border:1px solid #f2efe8;padding:12px 20px" style-hover="background:#f2efe8;color:#141312">{{ l.label }} ↗</a></sc-for></div></sc-if>
+</div>
+</div>
+</div>
+</article>
+</sc-for>
+</div>
+</div>
+</div>
+</div></sc-if>
+<sc-if value="{{ showMore }}" hint-placeholder-val="{{ true }}"><div style="padding:clamp(40px,6vh,72px) clamp(20px,4vw,56px) clamp(48px,7vh,88px);border-top:{{ moreBorder }}">
+<div style="max-width:1600px;margin:0 auto;position:relative">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px 24px;flex-wrap:wrap;padding-bottom:16px;border-bottom:1px solid #f2efe8"><h3 style="margin:0;font-size:clamp(24px,2.2vw,32px);line-height:1;font-weight:700;font-variation-settings:'wdth' 112;letter-spacing:-0.02em">{{ moreTitle }}</h3><sc-if value="{{ hasAllUrl }}" hint-placeholder-val="{{ true }}"><a href="{{ allUrl }}" target="_blank" rel="noopener" style="font-size:14px;letter-spacing:0.04em;text-transform:uppercase;border-bottom:1px solid currentColor">{{ allLabel }} ↗</a></sc-if></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,520px),1fr));gap:clamp(24px,3vw,40px) clamp(12px,1.6vw,24px);padding-top:clamp(20px,3vh,32px)"><sc-for list="{{ more }}" as="m" hint-placeholder-count="4"><div onMouseEnter="{{ m.enter }}" onMouseLeave="{{ m.leave }}" style="min-width:0;display:flex;flex-direction:column;gap:16px;opacity:{{ m.op }};transition:opacity .4s"><div style="position:relative;aspect-ratio:4/3;overflow:hidden;background:#2c2a26"><div style="position:absolute;inset:0;transform:scale({{ m.zoom }});transition:transform .7s cubic-bezier(.2,.8,.2,1)"><image-slot id="{{ m.id }}" src="{{ m.img }}" shape="rect" placeholder="{{ m.title }}: screenshot"></image-slot></div><sc-if value="{{ m.hasTag }}" hint-placeholder-val="{{ true }}"><span style="position:absolute;top:14px;left:14px;max-width:calc(100% - 28px);padding:6px 10px;background:#141312;color:#f2efe8;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;pointer-events:none;overflow-wrap:anywhere">{{ m.tag }}</span></sc-if></div><div style="display:flex;flex-direction:column;gap:12px"><div style="display:flex;align-items:baseline;gap:14px;min-width:0"><span style="color:#a8a399;font-size:14px;font-variant-numeric:tabular-nums">{{ m.n }}</span><span style="min-width:0;font-size:clamp(24px,2.2vw,34px);line-height:1.05;font-weight:700;font-variation-settings:'wdth' 112;letter-spacing:-0.02em;overflow-wrap:anywhere;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">{{ m.title }}</span></div><sc-if value="{{ m.hasSub }}" hint-placeholder-val="{{ true }}"><p style="margin:0;max-width:56ch;color:#d9d4ca;font-size:16px;line-height:1.5;text-wrap:pretty;overflow-wrap:anywhere;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden">{{ m.sub }}</p></sc-if><sc-if value="{{ m.hasMetrics }}" hint-placeholder-val="{{ true }}"><div style="display:flex;flex-wrap:wrap;gap:8px 24px;padding-top:12px;border-top:1px solid #3a3733"><sc-for list="{{ m.metrics }}" as="x" hint-placeholder-count="2"><span style="font-size:14px;color:#cfcac0;overflow-wrap:anywhere"><b style="font-size:18px;color:#f2efe8;margin-right:6px;font-variation-settings:'wdth' 112">{{ x.v }}</b>{{ x.k }}</span></sc-for></div></sc-if><sc-if value="{{ m.hasStack }}" hint-placeholder-val="{{ true }}"><div style="font-size:14px;color:#a8a399;line-height:1.6;letter-spacing:0.02em;overflow-wrap:anywhere;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">{{ m.stack }}</div></sc-if><sc-if value="{{ m.hasLinks }}" hint-placeholder-val="{{ true }}"><div style="display:flex;flex-wrap:wrap;gap:12px;padding-top:4px"><sc-for list="{{ m.links }}" as="l" hint-placeholder-count="2"><a href="{{ l.href }}" target="{{ l.t }}" rel="noopener" style="display:flex;align-items:center;gap:8px;padding:10px 16px;border:1px solid #f2efe8;font-size:13px;letter-spacing:0.06em;text-transform:uppercase" style-hover="background:#f2efe8;color:#141312">{{ l.label }} ↗</a></sc-for></div></sc-if></div></div></sc-for></div>
+<sc-if value="{{ hasToggle }}" hint-placeholder-val="{{ false }}"><div style="display:flex;justify-content:center;padding-top:clamp(28px,4vh,48px)"><button type="button" onClick="{{ toggleMore }}" style="display:flex;align-items:center;gap:14px;padding:16px 28px;background:transparent;color:#f2efe8;border:1px solid #f2efe8;font:inherit;font-size:15px;letter-spacing:0.06em;text-transform:uppercase;cursor:pointer" style-hover="background:#f2efe8;color:#141312"><span>{{ moreLabel }}</span><span>{{ moreIcon }}</span></button></div></sc-if>
+</div>
+</div></sc-if>
+</section></sc-if>
+<sc-if value="{{ showAbout }}" hint-placeholder-val="{{ true }}"><section id="about" style="min-height:calc(100vh - clamp(56px,9vh,96px));box-sizing:border-box;display:flex;flex-direction:column;scroll-margin-top:clamp(56px,9vh,96px);border-top:1px solid #3a3733;padding:clamp(32px,6vh,64px) clamp(20px,4vw,56px) clamp(24px,4vh,48px)">
+<div style="max-width:1600px;width:100%;margin:0 auto;flex:1;display:flex;flex-direction:column">
+<div style="padding-bottom:16px;border-bottom:1px solid #f2efe8"><h2 style="margin:0;font-size:clamp(32px,3.2vw,48px);line-height:1;font-weight:700;font-variation-settings:'wdth' 112;letter-spacing:-0.02em;overflow-wrap:anywhere">{{ expTitle }}</h2></div>
+<div style="flex:1;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:clamp(32px,4vw,80px);padding-top:clamp(12px,2.4vh,28px);align-items:stretch">
+<sc-if value="{{ showExp }}" hint-placeholder-val="{{ true }}"><div style="min-width:0;display:flex;flex-direction:column"><div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding-bottom:14px;border-bottom:1px solid #f2efe8"><span style="font-size:clamp(22px,1.9vw,30px);line-height:1;font-weight:700;font-variation-settings:'wdth' 112;letter-spacing:-0.02em">Work &amp; study</span><span style="font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:#a8a399">{{ expNo }}</span></div><div style="flex:1;display:flex;flex-direction:column"><sc-for list="{{ exp }}" as="e" hint-placeholder-count="3"><div style="border-bottom:1px solid #3a3733;flex:1 1 auto;display:flex;flex-direction:column;justify-content:center">
+<button type="button" onClick="{{ e.toggle }}" aria-expanded="{{ e.open }}" style="all:unset;box-sizing:border-box;width:100%;cursor:pointer;display:grid;grid-template-columns:minmax(0,10.5rem) minmax(0,1fr) auto;gap:6px clamp(16px,2vw,32px);align-items:center;padding:clamp(12px,2.2vh,28px) 0;opacity:{{ e.op }};transition:opacity .35s" style-hover="opacity:1"><span style="font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:#a8a399;display:flex;flex-wrap:wrap;gap:8px 10px;align-items:center"><span>{{ e.date }}</span><sc-if value="{{ e.nowShow }}" hint-placeholder-val="{{ false }}"><span style="background:#f2efe8;color:#141312;padding:2px 8px;font-weight:700">Now</span></sc-if></span><span style="min-width:0"><span style="display:block;font-size:clamp(22px,min(2.4vw,4.4vh),40px);line-height:1.05;font-weight:700;font-variation-settings:'wdth' 112;letter-spacing:-0.02em;overflow-wrap:anywhere">{{ e.role }}</span><span style="display:block;margin-top:6px;color:#cfcac0;font-size:clamp(14px,min(1.1vw,2vh),18px);overflow-wrap:anywhere">{{ e.org }}</span></span><span style="font-size:clamp(24px,2.4vw,36px);line-height:1;opacity:{{ e.plusOp }};transform:rotate({{ e.rot }});transition:transform .45s cubic-bezier(.2,.8,.2,1)">+</span></button>
+<div style="display:grid;grid-template-rows:{{ e.rows }};transition:grid-template-rows .5s cubic-bezier(.2,.8,.2,1)"><div style="overflow:hidden;min-height:0"><ul style="margin:0 0 0 min(10.5rem,25%);padding:0 0 clamp(12px,2vh,20px) clamp(16px,2vw,32px);list-style:none;display:flex;flex-direction:column;gap:8px;max-width:68ch;font-size:clamp(14px,min(1.05vw,2vh),17px);line-height:1.45;color:#e4e0d7;text-wrap:pretty"><sc-for list="{{ e.pts }}" as="t" hint-placeholder-count="2"><li style="display:flex;gap:12px"><span style="color:#a8a399">—</span><span style="min-width:0;overflow-wrap:anywhere">{{ t }}</span></li></sc-for></ul></div></div>
+</div></sc-for></div></div></sc-if>
+<sc-if value="{{ showRight }}" hint-placeholder-val="{{ true }}"><div style="min-width:0;display:flex;flex-direction:column;gap:clamp(20px,4vh,48px)">
+<sc-if value="{{ showCerts }}" hint-placeholder-val="{{ true }}"><div style="flex:{{ certFlex }} 1 0;display:flex;flex-direction:column"><div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding-bottom:14px;border-bottom:1px solid #f2efe8"><span style="font-size:clamp(22px,1.9vw,30px);line-height:1;font-weight:700;font-variation-settings:'wdth' 112;letter-spacing:-0.02em">Certifications</span><span style="font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:#a8a399">{{ certNo }}</span></div><sc-for list="{{ certs }}" as="x" hint-placeholder-count="2"><div style="flex:1;display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px clamp(16px,2vw,28px);align-items:center;padding:clamp(10px,2vh,20px) 0;border-bottom:1px solid #3a3733"><span style="font-size:clamp(28px,min(3.2vw,6vh),56px);line-height:1;font-weight:700;font-variation-settings:'wdth' 125;letter-spacing:-0.03em;color:#f2efe8">{{ x.year }}</span><span style="min-width:0"><span style="display:block;font-size:clamp(17px,1.4vw,22px);font-weight:700;line-height:1.2;overflow-wrap:anywhere">{{ x.title }}</span><span style="display:block;color:#cfcac0;font-size:15px;margin-top:4px;overflow-wrap:anywhere">{{ x.org }}</span></span></div></sc-for></div></sc-if>
+<sc-if value="{{ showSkills }}" hint-placeholder-val="{{ true }}"><div style="flex:{{ skillFlex }} 1 0;display:flex;flex-direction:column"><div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding-bottom:14px;border-bottom:1px solid #f2efe8"><span style="font-size:clamp(22px,1.9vw,30px);line-height:1;font-weight:700;font-variation-settings:'wdth' 112;letter-spacing:-0.02em">Toolkit</span><span style="font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:#a8a399">{{ skillNo }}</span></div><sc-for list="{{ skills }}" as="g" hint-placeholder-count="4"><div style="flex:1;display:grid;grid-template-columns:minmax(0,0.7fr) minmax(0,3fr);gap:8px 20px;align-items:center;padding:clamp(10px,1.8vh,18px) 0;border-bottom:1px solid #3a3733"><span style="font-size:clamp(16px,1.3vw,20px);font-weight:700;overflow-wrap:anywhere">{{ g.k }}</span><span style="display:flex;flex-wrap:wrap;gap:8px"><sc-for list="{{ g.chips }}" as="ch" hint-placeholder-count="3"><span style="padding:6px 12px;border:1px solid #6b665e;font-size:15px;color:#f2efe8;overflow-wrap:anywhere">{{ ch }}</span></sc-for></span></div></sc-for></div></sc-if>
+</div></sc-if>
+</div>
+</div>
+</section></sc-if>
+<sc-if value="{{ showContact }}" hint-placeholder-val="{{ true }}"><section id="contact" style="min-height:calc(100vh - clamp(56px,9vh,96px));box-sizing:border-box;display:flex;flex-direction:column;scroll-margin-top:clamp(56px,9vh,96px);border-top:1px solid #3a3733;padding:clamp(40px,6vh,72px) clamp(20px,4vw,56px) 28px">
+<div style="max-width:1600px;width:100%;margin:0 auto;flex:1;display:flex;flex-direction:column">
+<div style="padding-bottom:16px;border-bottom:1px solid #f2efe8"><h2 style="margin:0;font-size:clamp(32px,3.2vw,48px);line-height:1;font-weight:700;font-variation-settings:'wdth' 112;letter-spacing:-0.02em;overflow-wrap:anywhere">Contact</h2></div>
+<div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:clamp(24px,4vh,48px);padding:clamp(24px,4vh,48px) 0;min-width:0">
+<sc-if value="{{ hasNote }}" hint-placeholder-val="{{ true }}"><div style="font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:#a8a399;overflow-wrap:anywhere">{{ note }}</div></sc-if>
+<sc-if value="{{ hasEmail }}" hint-placeholder-val="{{ true }}"><div ref="{{ emBoxRef }}" style="min-width:0;overflow:hidden"><a ref="{{ emRef }}" href="{{ mailHref }}" style="display:inline-block;white-space:nowrap;line-height:1.05;font-weight:700;font-variation-settings:'wdth' 112;letter-spacing:-0.02em;letter-spacing:-0.04em" style-hover="text-decoration:none;opacity:.7">{{ email }}</a></div>
+<div style="display:flex;flex-wrap:wrap;gap:12px"><button type="button" onClick="{{ copyEmail }}" style="font:inherit;font-size:15px;text-transform:uppercase;letter-spacing:0.06em;cursor:pointer;background:#f2efe8;color:#141312;border:1px solid #f2efe8;padding:16px 28px;font-weight:700">{{ copyLabel }}</button><a href="{{ mailHref }}" style="font-size:15px;text-transform:uppercase;letter-spacing:0.06em;border:1px solid #f2efe8;padding:16px 28px" style-hover="background:#f2efe8;color:#141312;text-decoration:none">Write an email ↗</a></div></sc-if>
+</div>
+<sc-if value="{{ hasContactLinks }}" hint-placeholder-val="{{ true }}"><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:0 clamp(24px,4vw,64px);border-top:1px solid #3a3733"><sc-for list="{{ contactLinks }}" as="l" hint-placeholder-count="3"><a href="{{ l.href }}" target="{{ l.t }}" rel="noopener" style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:clamp(14px,2.4vh,24px) 0;border-bottom:1px solid #3a3733;font-size:clamp(20px,1.8vw,28px);font-weight:700;overflow-wrap:anywhere" style-hover="padding-left:12px"><span>{{ l.label }}</span><span>{{ l.icon }}</span></a></sc-for></div></sc-if>
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 32px;padding-top:20px;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:#a8a399"><span>{{ clock }}</span><span>{{ footer }}</span></div>
+</div>
+</section></sc-if>
+<sc-if value="{{ admin }}" hint-placeholder-val="{{ false }}"><aside aria-label="Content editor" style="position:fixed;top:0;right:0;bottom:0;z-index:100;width:min(440px,100vw);box-sizing:border-box;background:#1b1a18;border-left:1px solid #6b665e;display:flex;flex-direction:column;font-size:14px;line-height:1.4;box-shadow:-12px 0 40px rgba(0,0,0,.5)">
+<div style="display:flex;justify-content:space-between;align-items:center;padding:14px 16px;border-bottom:1px solid #3a3733"><b style="letter-spacing:0.06em;text-transform:uppercase;font-size:13px">Edit site content</b><button type="button" onClick="{{ closeAdmin }}" aria-label="Close editor" style="background:none;border:1px solid #6b665e;color:#f2efe8;font:inherit;padding:4px 10px;cursor:pointer">Close ✕</button></div>
+<div style="display:flex;flex-wrap:wrap;gap:6px;padding:10px 16px;border-bottom:1px solid #3a3733"><sc-for list="{{ tabs }}" as="t" hint-placeholder-count="6"><button type="button" onClick="{{ t.on }}" style="font:inherit;font-size:13px;padding:6px 12px;cursor:pointer;border:1px solid #6b665e;background:{{ t.bg }};color:{{ t.fg }}">{{ t.label }}</button></sc-for></div>
+<div style="flex:1;overflow:auto;padding:14px 16px 28px;display:flex;flex-wrap:wrap;gap:10px;align-content:flex-start">
+<sc-for list="{{ fields }}" as="f" hint-placeholder-count="4">
+<sc-if value="{{ f.isHead }}" hint-placeholder-val="{{ false }}"><div style="flex:1 1 100%;margin-top:10px;padding-top:10px;border-top:1px solid #3a3733;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:#a8a399">{{ f.label }}</div></sc-if>
+<sc-if value="{{ f.isText }}" hint-placeholder-val="{{ false }}"><label style="flex:1 1 100%;display:flex;flex-direction:column;gap:4px"><span style="font-size:12px;color:#a8a399">{{ f.label }}</span><input type="text" value="{{ f.value }}" onChange="{{ f.on }}" style="width:100%;box-sizing:border-box;background:#141312;color:#f2efe8;border:1px solid #4a463f;padding:8px 10px;font:inherit;font-size:14px;line-height:1.4"></label></sc-if>
+<sc-if value="{{ f.isArea }}" hint-placeholder-val="{{ false }}"><label style="flex:1 1 100%;display:flex;flex-direction:column;gap:4px"><span style="font-size:12px;color:#a8a399">{{ f.label }}</span><textarea rows="{{ f.rows }}" value="{{ f.value }}" onChange="{{ f.on }}" style="width:100%;box-sizing:border-box;background:#141312;color:#f2efe8;border:1px solid #4a463f;padding:8px 10px;font:inherit;font-size:14px;line-height:1.4;resize:vertical"></textarea></label></sc-if>
+<sc-if value="{{ f.isCheck }}" hint-placeholder-val="{{ false }}"><label style="flex:1 1 100%;display:flex;align-items:center;gap:10px;cursor:pointer"><input type="checkbox" checked="{{ f.value }}" onChange="{{ f.on }}" style="width:18px;height:18px"><span>{{ f.label }}</span></label></sc-if>
+<sc-if value="{{ f.isBtn }}" hint-placeholder-val="{{ false }}"><button type="button" onClick="{{ f.on }}" style="font:inherit;font-size:13px;padding:6px 12px;cursor:pointer;border:1px solid #6b665e;background:{{ f.bg }};color:{{ f.fg }}">{{ f.label }}</button></sc-if>
+<sc-if value="{{ f.isFile }}" hint-placeholder-val="{{ false }}"><label style="flex:1 1 100%;display:flex;flex-direction:column;gap:6px"><span style="font-size:12px;color:#a8a399">{{ f.label }}</span><input type="file" accept="{{ f.accept }}" onChange="{{ f.on }}" style="width:100%;box-sizing:border-box;background:#141312;color:#f2efe8;border:1px solid #4a463f;padding:8px 10px;font:inherit;font-size:13px;line-height:1.4"></label></sc-if>
+<sc-if value="{{ f.isNote }}" hint-placeholder-val="{{ false }}"><div style="flex:1 1 100%;font-size:12px;color:#a8a399">{{ f.label }}</div></sc-if>
+</sc-for>
+</div>
+<div style="padding:10px 16px;border-top:1px solid #3a3733;font-size:12px;color:#a8a399">Saved in this browser as you type. Use Data → Export to keep a copy.</div>
+</aside></sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { c: this.load(), admin: false, tab: 'hero', pi: 0, ei: 0, ex: 0, open: false, hov: -1, copied: false, now: Date.now(), idx: 0, pinned: true, json: '', msg: '' };
+  outerRef = React.createRef(); trackRef = React.createRef();
+  boxRef = React.createRef(); h1Ref = React.createRef(); emRef = React.createRef(); emBoxRef = React.createRef();
+  KEY = 'sreehari-portfolio-content-v1';
+
+  defaults() {
+    const gh = 'https://github.com/SR33H4R1/';
+    const more = (i) => ({ id: 'more-shot-' + i, featured: false, title: 'Project name', tag: 'Category', sub: 'One or two lines on what it does and who it is for.', stack: 'Stack · Stack · Stack · Stack', img: 'ph/more-shot-' + i + '.png', metrics: [{ v: '00', k: 'key metric' }, { v: '00%', k: 'outcome' }], links: [{ label: 'Live demo', href: '#' }, { label: 'GitHub', href: gh }] });
+    return {
+      brand: 'SREEHARI A L',
+      eyebrow: 'Sreehari A L · AI & Backend Engineer',
+      headline: 'I build LLM systems\nthat cite their\nsources.',
+      intro: 'AI engineer at Tecnots. I ship the service layer behind LLM features: retrieval, structured outputs, evals, guardrails and CI, so every answer is traceable and safe.',
+      links: [{ label: 'GitHub', href: gh }, { label: 'LinkedIn', href: 'https://linkedin.com/in/sreehari-a-l' }],
+      facts: [{ k: 'Based', v: 'Bengaluru, India' }, { k: 'Status', v: 'Open to roles' }, { k: 'Focus', v: 'RAG, agents, evals' }, { k: 'Stack', v: 'Python, FastAPI' }],
+      email: 'sreehariarun191@gmail.com', resumeUrl: 'Sreehari_AL_Resume.pdf',
+      note: 'Open to AI engineering roles · Replies within a day', footer: '© 2026 Sreehari A L',
+      workTitle: 'Selected work', moreTitle: 'Other projects', expTitle: 'Experience', allUrl: gh.slice(0, -1), allLabel: 'All on GitHub',
+      showWorkSection: true, showFeaturedProjects: true, showMoreProjects: true, showAllProjectsLink: true, showExperienceSection: true, showCertificationsSection: true, showToolkitSection: true, showContactSection: true,
+      projects: [
+        { id: 'grounded-shot', featured: true, title: 'Grounded', tag: 'Role-aware RAG', sub: 'Ask across your documents and get an answer with its source attached. Retrieval respects who is asking, so users only see what they are allowed to.', stack: 'FastAPI · FAISS · OpenAI-compatible LLM · Docker · CI', img: 'ph/grounded-shot.png', metrics: [{ v: 'RBAC', k: 'access control on retrieval' }, { v: 'Cited', k: 'source on every answer' }], links: [{ label: 'Live demo', href: '#' }, { label: 'GitHub', href: gh + 'Grounded' }] },
+        { id: 'querymind-shot', featured: true, title: 'QueryMind', tag: 'NL → SQL API', sub: 'Ask your database in plain English. The model writes the SQL; a three-layer guard makes sure it can only ever read.', stack: 'FastAPI · LLM · PostgreSQL · Docker', img: 'ph/querymind-shot.png', metrics: [{ v: '3-layer', k: 'guardrail: writes, DDL, injection blocked' }, { v: 'Read-only', k: 'queries by design' }], links: [{ label: 'Live demo', href: '#' }, { label: 'GitHub', href: gh + 'querymind' }] },
+        { id: 'router-shot', featured: true, title: 'Ticket Router', tag: 'On-prem LLM', sub: 'Sorts and routes support tickets with Llama 3 running locally. No ticket data ever leaves the building.', stack: 'FastAPI · LangChain · Ollama · Llama 3', img: 'ph/router-shot.png', metrics: [{ v: '0', k: 'external API calls' }, { v: '100%', k: 'on-prem' }], links: [{ label: 'Live demo', href: '#' }, { label: 'GitHub', href: gh + 'ai-support-ticket-router' }] },
+        more(0), more(1), more(2), more(3), more(4), more(5), more(6)
+      ],
+      exp: [
+        { date: 'May 2026 – Present', role: 'AI Engineer Intern', org: 'Tecnots · Bengaluru', now: true, pts: ['Built RAG pipelines and multi-step LangGraph agents with citation-enforced answers over a ~3,000-document corpus.', 'Built an LLM-as-judge eval suite (~100 items) with LangSmith and Langfuse tracing for quality, latency and cost.', 'Shipped guardrails on every response: Pydantic-validated JSON, prompt-injection defense and PII redaction.'] },
+        { date: '2025', role: 'AI & Data Science Training', org: 'Luminar Technolab · Kochi', now: false, pts: ['Applied ML, deep learning, NLP, computer vision and GenAI, with hands-on CV and OCR projects.'] },
+        { date: '2024', role: 'B.Tech, Computer Science', org: 'Rajadhani Institute of Engineering and Technology · Trivandrum', now: false, pts: [] }
+      ],
+      certs: [{ year: '2026', title: 'Generative AI Applications', org: 'IBM' }, { year: '2025', title: 'Machine Learning Specialization', org: 'DeepLearning.AI / Stanford' }],
+      skills: [{ k: 'LLM', items: 'RAG, LangChain, LangGraph, FAISS, pgvector' }, { k: 'Reliability', items: 'RAGAS, LangSmith, Langfuse, Guardrails' }, { k: 'Backend', items: 'Python, FastAPI, PostgreSQL, SQLAlchemy' }, { k: 'Ops', items: 'Docker, GitHub Actions, AWS, pytest' }]
+    };
+  }
+  norm(c) { ['links', 'facts', 'projects', 'exp', 'certs', 'skills'].forEach(k => { if (!Array.isArray(c[k])) c[k] = []; }); return c; }
+  load() { const d = this.defaults(); try { const s = localStorage.getItem('sreehari-portfolio-content-v1'); if (!s) return d; return this.norm(Object.assign(d, JSON.parse(s))); } catch (e) { return d; } }
+  save(c) { try { localStorage.setItem('sreehari-portfolio-content-v1', JSON.stringify(c)); } catch (e) {} }
+  upd(fn) { this.setState(s => { const c = JSON.parse(JSON.stringify(s.c)); fn(c); this.save(c); return { c }; }); }
+  getp(o, p) { return p.reduce((a, k) => (a == null ? a : a[k]), o); }
+  setp(o, p, v) { const t = this.getp(o, p.slice(0, -1)); if (t) t[p[p.length - 1]] = v; }
+  del = (p, i) => this.upd(c => { this.getp(c, p).splice(i, 1); });
+  add = (p, o) => this.upd(c => { this.getp(c, p).push(o); });
+  mv = (p, i, d) => this.upd(c => { const a = this.getp(c, p), j = i + d; if (j < 0 || j >= a.length) return; const t = a[i]; a[i] = a[j]; a[j] = t; });
+
+  nf() { const c = this.state.c; return c.showFeaturedProjects === false ? 0 : (c.projects || []).filter(p => p && p.featured).length; }
+  update = () => {
+    this.raf = 0;
+    const pinned = window.innerWidth >= 1040 && window.innerHeight >= 640;
+    if (pinned !== this.state.pinned) this.setState({ pinned });
+    const o = this.outerRef.current, t = this.trackRef.current, n = this.nf(); if (!o || !t) return;
+    if (!(pinned && n > 1)) { t.style.transform = 'none'; return; }
+    const total = o.offsetHeight - window.innerHeight;
+    const p = total > 0 ? Math.min(1, Math.max(0, -o.getBoundingClientRect().top / total)) : 0;
+    t.style.transform = 'translate3d(' + (-p * (n - 1) * 100 / n) + '%,0,0)';
+    const idx = Math.round(p * (n - 1));
+    if (idx !== this.state.idx) this.setState({ idx });
+  };
+  onScroll = () => { if (!this.raf) this.raf = requestAnimationFrame(this.update); };
+  onResize = () => { this.onScroll(); this.fit(); };
+  fit = () => {
+    const box = this.boxRef.current, h = this.h1Ref.current;
+    if (box && h && box.clientWidth > 0) {
+      let lo = 12, hi = Math.min(Math.max(box.clientWidth, 40), 520), best = lo;
+      for (let i = 0; i < 18; i++) { const m = (lo + hi) / 2; h.style.fontSize = m + 'px'; if (h.scrollWidth <= box.clientWidth + 1 && h.offsetHeight <= box.clientHeight) { best = m; lo = m; } else hi = m; }
+      h.style.fontSize = best + 'px';
+    }
+    const eb = this.emBoxRef.current, em = this.emRef.current;
+    if (eb && em && eb.clientWidth > 0) {
+      em.style.fontSize = '100px'; const w = em.offsetWidth || 1;
+      em.style.fontSize = Math.max(14, Math.min(100 * eb.clientWidth / w, window.innerHeight * 0.14)) + 'px';
+    }
+  };
+  go(i) {
+    const o = this.outerRef.current, n = this.nf(); if (!o || !this.state.pinned || n < 2) return;
+    const total = o.offsetHeight - window.innerHeight;
+    const top = o.getBoundingClientRect().top + window.scrollY + total * (Math.max(0, Math.min(n - 1, i)) / (n - 1));
+    window.scrollTo({ top, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+  }
+  onKey = e => { if (e.ctrlKey && e.shiftKey && (e.key === 'E' || e.key === 'e')) { e.preventDefault(); this.setState(s => ({ admin: !s.admin })); } };
+  componentDidMount() {
+    this.iv = setInterval(() => this.setState({ now: Date.now() }), 30000);
+    window.addEventListener('scroll', this.onScroll, { passive: true }); window.addEventListener('resize', this.onResize); window.addEventListener('keydown', this.onKey);
+    if (/[?&]admin/.test(location.search)) this.setState({ admin: true });
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => { this.fit(); this.update(); });
+    this.update(); this.fit();
+  }
+  componentDidUpdate(prevProps, prevState) { if (prevState.c !== this.state.c || prevState.admin !== this.state.admin || prevState.tab !== this.state.tab) this.fit(); }
+  componentWillUnmount() { clearInterval(this.iv); clearTimeout(this.t); cancelAnimationFrame(this.raf); window.removeEventListener('scroll', this.onScroll); window.removeEventListener('resize', this.onResize); window.removeEventListener('keydown', this.onKey); }
+  copyEmail = () => {
+    const done = () => { this.setState({ copied: true }); clearTimeout(this.t); this.t = setTimeout(() => this.setState({ copied: false }), 1800); };
+    const em = this.state.c.email || '';
+    if (navigator.clipboard) navigator.clipboard.writeText(em).then(done, done); else done();
+  };
+  upload = async (file, p) => {
+    if (!file) return;
+    this.setState({ msg: 'Uploading ' + file.name + '...' });
+    try {
+      const fd = new FormData(); fd.append('file', file);
+      const res = await fetch('/api/upload', { method: 'POST', body: fd });
+      const data = await res.json();
+      if (!res.ok || !data.url) throw new Error(data.error || 'Upload failed');
+      this.upd(c => this.setp(c, p, data.url));
+      this.setState({ msg: 'Uploaded: ' + data.url });
+    } catch (e) {
+      this.setState({ msg: e && e.message ? e.message : 'Upload failed.' });
+    }
+  };
+
+  fields() {
+    const c = this.state.c, F = [], self = this, str = x => (x == null ? '' : String(x)), arr = x => (Array.isArray(x) ? x : []);
+    const HD = l => F.push({ isHead: true, label: l });
+    const NT = l => F.push({ isNote: true, label: l });
+    const T = (l, p) => F.push({ isText: true, label: l, value: str(self.getp(c, p)), on: e => { const v = e.target.value; self.upd(cc => self.setp(cc, p, v)); } });
+    const A = (l, p, rows, lines) => F.push({ isArea: true, rows: rows || 3, label: l, value: lines ? arr(self.getp(c, p)).join('\n') : str(self.getp(c, p)), on: e => { const v = e.target.value; self.upd(cc => self.setp(cc, p, lines ? v.split('\n') : v)); } });
+    const K = (l, p) => F.push({ isCheck: true, label: l, value: !!self.getp(c, p), on: e => { const v = e.target.checked; self.upd(cc => self.setp(cc, p, v)); } });
+    const U = (l, p, accept) => F.push({ isFile: true, label: l, accept: accept || '', on: e => { const file = e.target.files && e.target.files[0]; self.upload(file, p); e.target.value = ''; } });
+    const B = (l, fn, on) => F.push({ isBtn: true, label: l, on: fn, bg: on ? '#f2efe8' : 'transparent', fg: on ? '#141312' : '#f2efe8' });
+    const list = (title, p, fieldsOf, blank) => {
+      HD(title); arr(self.getp(c, p)).forEach((it, i) => { fieldsOf(i); B('Remove', () => self.del(p, i)); B('↑', () => self.mv(p, i, -1)); B('↓', () => self.mv(p, i, 1)); }); B('+ Add', () => self.add(p, blank));
+    };
+    const tab = this.state.tab;
+    if (tab === 'hero') {
+      T('Small line above headline', ['eyebrow']); A('Main headline (new line = line break)', ['headline'], 4); A('Intro paragraph', ['intro'], 4);
+      list('Links under intro (email is added automatically)', ['links'], i => { T('Label', ['links', i, 'label']); T('URL', ['links', i, 'href']); }, { label: 'Link', href: 'https://' });
+      list('Facts (right side)', ['facts'], i => { T('Label', ['facts', i, 'k']); T('Value', ['facts', i, 'v']); }, { k: 'Label', v: 'Value' });
+    } else if (tab === 'projects') {
+      const ps = arr(c.projects), pi = Math.min(this.state.pi, Math.max(0, ps.length - 1));
+      HD('Pick a project'); ps.forEach((p, i) => B((i + 1) + ' ' + str(p.title).slice(0, 14) + (p.featured ? ' ★' : ''), () => self.setState({ pi: i }), i === pi));
+      B('+ New project', () => { self.upd(cc => cc.projects.push({ id: 'p' + Date.now(), featured: false, title: 'New project', tag: '', sub: '', stack: '', img: '', metrics: [], links: [] })); self.setState({ pi: ps.length }); });
+      if (ps[pi]) {
+        const b = ['projects', pi];
+        HD('Editing: ' + str(ps[pi].title)); K('Featured (big scrolling slide)', b.concat('featured')); T('Title', b.concat('title')); T('Category tag', b.concat('tag')); A('Description', b.concat('sub'), 4); T('Tech stack', b.concat('stack'));
+        T('Image URL (blank = drag an image onto the slot)', b.concat('img'));
+        U('Upload project image', b.concat('img'), 'image/png,image/jpeg,image/webp,image/gif');
+        list('Metrics (up to 4 shown)', b.concat('metrics'), i => { T('Value', b.concat(['metrics', i, 'v'])); T('Caption', b.concat(['metrics', i, 'k'])); }, { v: '', k: '' });
+        list('Buttons (empty URL hides it)', b.concat('links'), i => { T('Label', b.concat(['links', i, 'label'])); T('URL', b.concat(['links', i, 'href'])); }, { label: 'GitHub', href: 'https://' });
+        HD('Project order'); B('Move earlier', () => { self.mv(['projects'], pi, -1); self.setState({ pi: Math.max(0, pi - 1) }); }); B('Move later', () => { self.mv(['projects'], pi, 1); self.setState({ pi: Math.min(ps.length - 1, pi + 1) }); });
+        B('Delete project', () => { if (confirm('Delete this project?')) { self.del(['projects'], pi); self.setState({ pi: Math.max(0, pi - 1) }); } });
+      } else NT('No projects yet.');
+    } else if (tab === 'exp') {
+      const es = arr(c.exp), ei = Math.min(this.state.ei, Math.max(0, es.length - 1));
+      T('Section title', ['expTitle']);
+      HD('Pick an entry'); es.forEach((e, i) => B((i + 1) + ' ' + str(e.role).slice(0, 16), () => self.setState({ ei: i }), i === ei));
+      B('+ New entry', () => { self.upd(cc => cc.exp.push({ date: '', role: 'New role', org: '', now: false, pts: [] })); self.setState({ ei: es.length }); });
+      if (es[ei]) {
+        const b = ['exp', ei]; HD('Editing: ' + str(es[ei].role)); T('Date', b.concat('date')); T('Role / degree', b.concat('role')); T('Organisation', b.concat('org')); K('Show "Now" badge', b.concat('now')); A('Bullets (one per line)', b.concat('pts'), 6, true);
+        HD('Order'); B('Move earlier', () => { self.mv(['exp'], ei, -1); self.setState({ ei: Math.max(0, ei - 1) }); }); B('Move later', () => { self.mv(['exp'], ei, 1); self.setState({ ei: Math.min(es.length - 1, ei + 1) }); });
+        B('Delete entry', () => { if (confirm('Delete this entry?')) { self.del(['exp'], ei); self.setState({ ei: Math.max(0, ei - 1) }); } });
+      } else NT('No entries. The left panel is hidden.');
+    } else if (tab === 'creds') {
+      list('Certifications', ['certs'], i => { T('Year', ['certs', i, 'year']); T('Title', ['certs', i, 'title']); T('Issuer', ['certs', i, 'org']); }, { year: '', title: 'New certification', org: '' });
+      list('Skill groups (items separated by commas)', ['skills'], i => { T('Group name', ['skills', i, 'k']); T('Items', ['skills', i, 'items']); }, { k: 'Group', items: '' });
+    } else if (tab === 'site') {
+      HD('Section visibility'); K('Show work section', ['showWorkSection']); K('Show featured projects', ['showFeaturedProjects']); K('Show other projects', ['showMoreProjects']); K('Show "All projects" link', ['showAllProjectsLink']); K('Show experience section', ['showExperienceSection']); K('Show certifications', ['showCertificationsSection']); K('Show toolkit', ['showToolkitSection']); K('Show contact section', ['showContactSection']);
+      HD('Site text');
+      T('Name in header', ['brand']); T('Email (blank hides the email block)', ['email']); T('Resume file or URL (blank hides buttons)', ['resumeUrl']);
+      U('Upload resume PDF', ['resumeUrl'], 'application/pdf');
+      T('Line above email', ['note']); T('Footer text', ['footer']); T('Work section title', ['workTitle']); T('Other-projects title', ['moreTitle']); T('"All projects" URL (blank hides)', ['allUrl']); T('"All projects" label', ['allLabel']);
+    } else {
+      NT('Everything is stored in this browser. Export to back up or move it to another browser.');
+      B('Download JSON', () => { const b = new Blob([JSON.stringify(c, null, 2)], { type: 'application/json' }), a = document.createElement('a'); a.href = URL.createObjectURL(b); a.download = 'portfolio-content.json'; a.click(); });
+      B('Show JSON below', () => self.setState({ json: JSON.stringify(c, null, 2), msg: '' }));
+      F.push({ isArea: true, rows: 10, label: 'Paste JSON here, then Apply', value: this.state.json, on: e => self.setState({ json: e.target.value }) });
+      B('Apply JSON', () => { try { const o = self.norm(Object.assign(self.defaults(), JSON.parse(self.state.json))); self.save(o); self.setState({ c: o, msg: 'Applied.' }); } catch (e) { self.setState({ msg: 'Invalid JSON.' }); } });
+      B('Reset to defaults', () => { if (confirm('Discard all edits and restore the original content?')) { const d = self.defaults(); self.save(d); self.setState({ c: d, msg: 'Reset.' }); } });
+      if (this.state.msg) NT(this.state.msg);
+    }
+    return F;
+  }
+
+  renderVals() {
+    const S = this.state, c = S.c, str = x => (x == null ? '' : String(x)), arr = x => (Array.isArray(x) ? x : []);
+    const safe = u => { u = str(u).trim(); if (!u) return ''; return (/^(https?:|mailto:|tel:|#|\.{0,2}\/)/i.test(u) || /^[\w.\-\/%]+$/.test(u)) ? u : '#'; };
+    const tgt = h => (/^https?:/i.test(h) ? '_blank' : '_self');
+    const pad = n => String(n).padStart(2, '0');
+    const tm = new Date(S.now).toLocaleTimeString('en-GB', { timeZone: 'Asia/Kolkata', hour: '2-digit', minute: '2-digit' });
+    const lk = a => arr(a).map(l => ({ label: str(l && l.label).trim(), href: safe(l && l.href) })).filter(l => l.label && l.href).map(l => ({ ...l, t: tgt(l.href) }));
+    const card = p => { const metrics = arr(p.metrics).filter(m => m && (str(m.v).trim() || str(m.k).trim())).slice(0, 4).map(m => ({ v: str(m.v), k: str(m.k) })); const links = lk(p.links); return { id: str(p.id) || 'p', img: str(p.img), title: str(p.title) || 'Untitled', tag: str(p.tag), sub: str(p.sub), stack: str(p.stack), hasTag: !!str(p.tag).trim(), hasSub: !!str(p.sub).trim(), hasStack: !!str(p.stack).trim(), metrics, hasMetrics: metrics.length > 0, links, hasLinks: links.length > 0 }; };
+    const all = arr(c.projects).filter(Boolean), canShowFeatured = c.showFeaturedProjects !== false, canShowMore = c.showMoreProjects !== false;
+    const nf = canShowFeatured ? all.filter(p => p.featured).length : 0;
+    const pinned = S.pinned && nf > 1, idx = Math.min(S.idx, Math.max(0, nf - 1));
+    const featured = canShowFeatured ? all.filter(p => p.featured).map((p, i) => ({ ...card(p), n: pad(i + 1), dim: (pinned && i !== idx) ? 0.35 : 1, border: (pinned || i === 0) ? 'none' : '1px solid #3a3733', gap: (pinned || i === 0) ? '0' : '24px' })) : [];
+    const othersAll = canShowMore ? all.filter(p => !p.featured) : [], CAP = 4, open = S.open;
+    const others = (open ? othersAll : othersAll.slice(0, CAP));
+    const more = others.map((p, k) => { const on = S.hov === k; return { ...card(p), n: pad(nf + k + 1), enter: () => this.setState({ hov: k }), leave: () => this.setState({ hov: -1 }), op: S.hov < 0 || on ? 1 : 0.4, zoom: on ? 1.06 : 1 }; });
+    const expAll = arr(c.exp).filter(Boolean), ex = S.ex;
+    const exp = expAll.map((e, i) => { const pts = arr(e.pts).map(str).filter(x => x.trim()), has = pts.length > 0, o = ex === i && has; return { date: str(e.date), role: str(e.role) || 'Untitled', org: str(e.org), pts, nowShow: !!e.now, open: o, op: (o || !has) ? 1 : 0.55, plusOp: has ? 1 : 0, rot: o ? '45deg' : '0deg', rows: o ? '1fr' : '0fr', toggle: () => { if (has) this.setState(st => ({ ex: st.ex === i ? -1 : i })); } }; });
+    const certs = arr(c.certs).filter(x => x && (str(x.title).trim() || str(x.year).trim())).map(x => ({ year: str(x.year), title: str(x.title), org: str(x.org) }));
+    const skills = arr(c.skills).filter(Boolean).map(g => ({ k: str(g.k), chips: str(g.items).split(',').map(s => s.trim()).filter(Boolean) })).filter(g => g.k.trim() || g.chips.length);
+    let k = 0; const no = (n, on) => (on ? pad(++k) + ' · ' + n : '');
+    const expNo = no(exp.length, exp.length > 0), certNo = no(certs.length, certs.length > 0), skillNo = no(skills.length, skills.length > 0);
+    const email = str(c.email).trim(), resume = safe(c.resumeUrl);
+    const heroLinks = (email ? [{ label: 'Email', href: 'mailto:' + email, t: '_self' }] : []).concat(lk(c.links));
+    const contactLinks = lk(c.links).map(l => ({ ...l, icon: '↗' })).concat(resume ? [{ label: 'Resume', href: resume, t: '_blank', icon: '↓' }] : []);
+    const facts = arr(c.facts).filter(f => f && (str(f.k).trim() || str(f.v).trim())).map(f => ({ k: str(f.k), v: str(f.v) }));
+    const showExp = c.showExperienceSection !== false && exp.length > 0, showCerts = c.showCertificationsSection !== false && certs.length > 0, showSkills = c.showToolkitSection !== false && skills.length > 0;
+    const showWork = c.showWorkSection !== false && (featured.length > 0 || othersAll.length > 0), showRight = showCerts || showSkills;
+    const showContact = c.showContactSection !== false && (!!email || contactLinks.length > 0 || !!str(c.note).trim());
+    const navItems = [].concat(showWork ? [{ label: str(c.workTitle) ? 'Work' : 'Work', href: '#work' }] : [], (showExp || showRight) ? [{ label: 'Experience', href: '#about' }] : [], showContact ? [{ label: 'Contact', href: '#contact' }] : []);
+    const hasIntro = !!str(c.intro).trim();
+    const tabDefs = [['hero', 'Hero'], ['projects', 'Projects'], ['exp', 'Experience'], ['creds', 'Credentials'], ['site', 'Site & contact'], ['data', 'Data']];
+    const sf = (certs.length ? 2 : 0), kf = (skills.length ? 3.4 : 0);
+    return {
+      brand: str(c.brand), navItems, hasResume: !!resume, resumeHref: resume, resumeLabel: 'Resume',
+      eyebrow: str(c.eyebrow), hasEyebrow: !!str(c.eyebrow).trim(), headline: str(c.headline), boxRef: this.boxRef, h1Ref: this.h1Ref,
+      intro: str(c.intro), hasIntro, heroLinks, facts, hasFacts: facts.length > 0, hasHeroBottom: hasIntro || heroLinks.length > 0 || facts.length > 0,
+      showWork, showFeat: nf > 0, showMore: othersAll.length > 0, workTitle: str(c.workTitle) || 'Selected work', moreTitle: nf > 0 ? (str(c.moreTitle) || 'Other projects') : (str(c.workTitle) || 'Projects'), moreBorder: nf > 0 ? '1px solid #3a3733' : 'none',
+      hasAllUrl: c.showAllProjectsLink !== false && !!safe(c.allUrl), allUrl: safe(c.allUrl), allLabel: str(c.allLabel) || 'All projects',
+      outerRef: this.outerRef, trackRef: this.trackRef,
+      outerH: pinned ? (nf * 100) + 'vh' : 'auto', trackW: pinned ? (nf * 100) + '%' : '100%', trackDir: pinned ? 'row' : 'column', artH: pinned ? '100%' : 'auto',
+      imgMaxH: pinned ? '100%' : 'min(56vh,480px)', stickyPos: pinned ? 'sticky' : 'static', stickyH: pinned ? '100vh' : 'auto', stickyPad: pinned ? 'calc(clamp(56px,9vh,96px) + 4px)' : '48px',
+      showPos: nf > 1 && pinned, pos: pad(idx + 1) + ' / ' + pad(nf), featured, more,
+      hasToggle: othersAll.length > CAP, toggleMore: () => this.setState(st => ({ open: !st.open, hov: -1 })), moreLabel: open ? 'Show fewer' : 'More projects', moreIcon: open ? '↑' : '↓',
+      showAbout: showExp || showRight, showExp, showRight, showCerts, showSkills, expTitle: str(c.expTitle) || 'Experience',
+      exp, certs, skills, expNo, certNo, skillNo, certFlex: skills.length ? 2 : 1, skillFlex: certs.length ? 3.4 : 1,
+      showContact, hasNote: !!str(c.note).trim(), note: str(c.note), hasEmail: !!email, email, mailHref: 'mailto:' + email, emRef: this.emRef, emBoxRef: this.emBoxRef,
+      copyEmail: this.copyEmail, copyLabel: S.copied ? 'Copied ✓' : 'Copy email', hasContactLinks: contactLinks.length > 0, contactLinks, clock: 'BLR ' + tm + ' IST', footer: str(c.footer),
+      admin: S.admin, closeAdmin: () => this.setState({ admin: false }),
+      tabs: tabDefs.map(([id, label]) => ({ label, on: () => this.setState({ tab: id }), bg: S.tab === id ? '#f2efe8' : 'transparent', fg: S.tab === id ? '#141312' : '#f2efe8' })),
+      fields: S.admin ? this.fields() : []
+    };
+  }
+}
+</script>
+</body>
+</html>
